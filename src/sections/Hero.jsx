@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import Button from "../components/Button";
+import mountainVideo from "../assets/images/video/mountain-view.mp4";
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen overflow-hidden">
       <div className="pointer-events-none absolute inset-0">
         <video
-          src="/src/assets/images/video/mountain-view.mp4"
+          src={mountainVideo}
           autoPlay
           muted
           loop
