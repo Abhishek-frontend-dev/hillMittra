@@ -61,9 +61,14 @@ export default function NavBar() {
         <button
           type="button"
           onClick={handleLogoClick}
-          className="text-lg font-semibold tracking-[0.24em] text-white/95 sm:text-xl"
+          aria-label="Parvat Mittra home"
+          className="flex h-9 items-center sm:h-11"
         >
-          ParvatMittra
+          <img
+            src="/HillMittra_Full_Logo.svg"
+            alt=""
+            className="h-full w-auto"
+          />
         </button>
 
         <nav className="hidden items-center gap-7 lg:flex">
