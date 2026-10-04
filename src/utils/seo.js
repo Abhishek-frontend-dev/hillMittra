@@ -1,11 +1,10 @@
 export function getSeoMetadata(content, type) {
-  const baseUrl = "https://parvatmittra.com";
+  const baseUrl = "https://www.hillmittra.com";
   const slug = content?.slug ? `/${type}/${content.slug}` : "/";
   const canonicalUrl = `${baseUrl}${slug}`;
 
   return {
-    title:
-      content?.seoTitle || content?.title || content?.name || "HillMittra",
+    title: content?.seoTitle || content?.title || content?.name || "HillMittra",
     description:
       content?.seoDescription ||
       content?.description ||
