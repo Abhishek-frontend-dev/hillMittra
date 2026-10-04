@@ -35,9 +35,9 @@ export default function Home({ scrollToSection }) {
 
   const seo = getSeoMetadata(
     {
-      seoTitle: "ParvatMittra | Mountain Travel Reimagined",
+      seoTitle: "HillMittra | Mountain Travel Reimagined",
       seoDescription:
-        "ParvatMittra offers premium editorial guidance for destinations, guides, stories and weather planning in the Himalaya.",
+        "HillMittra offers premium editorial guidance for destinations, guides, stories and weather planning in the Himalaya.",
     },
     "home",
   );

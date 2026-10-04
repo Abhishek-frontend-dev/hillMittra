@@ -5,27 +5,27 @@ export function getSeoMetadata(content, type) {
 
   return {
     title:
-      content?.seoTitle || content?.title || content?.name || "ParvatMittra",
+      content?.seoTitle || content?.title || content?.name || "HillMittra",
     description:
       content?.seoDescription ||
       content?.description ||
       content?.subtitle ||
-      "ParvatMittra helps travelers discover calm, premium mountain experiences.",
+      "HillMittra helps travelers discover calm, premium mountain experiences.",
     canonicalUrl,
     ogTitle:
-      content?.seoTitle || content?.title || content?.name || "ParvatMittra",
+      content?.seoTitle || content?.title || content?.name || "HillMittra",
     ogDescription:
       content?.seoDescription ||
       content?.description ||
       content?.subtitle ||
-      "ParvatMittra helps travelers discover calm, premium mountain experiences.",
+      "HillMittra helps travelers discover calm, premium mountain experiences.",
     ogUrl: canonicalUrl,
     twitterTitle:
-      content?.seoTitle || content?.title || content?.name || "ParvatMittra",
+      content?.seoTitle || content?.title || content?.name || "HillMittra",
     twitterDescription:
       content?.seoDescription ||
       content?.description ||
       content?.subtitle ||
-      "ParvatMittra helps travelers discover calm, premium mountain experiences.",
+      "HillMittra helps travelers discover calm, premium mountain experiences.",
   };
 }

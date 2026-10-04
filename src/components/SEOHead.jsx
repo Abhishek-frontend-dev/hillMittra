@@ -12,7 +12,7 @@ export default function SEOHead({
   image,
 }) {
   useEffect(() => {
-    const nextTitle = title || "ParvatMittra";
+    const nextTitle = title || "HillMittra";
     document.title = nextTitle;
 
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -20,14 +20,14 @@ export default function SEOHead({
       metaDescription.setAttribute(
         "content",
         description ||
-          "ParvatMittra helps travelers discover calm, premium mountain experiences.",
+          "HillMittra helps travelers discover calm, premium mountain experiences.",
       );
     } else {
       const tag = document.createElement("meta");
       tag.name = "description";
       tag.content =
         description ||
-        "ParvatMittra helps travelers discover calm, premium mountain experiences.";
+        "HillMittra helps travelers discover calm, premium mountain experiences.";
       document.head.appendChild(tag);
     }
 
@@ -54,12 +54,12 @@ export default function SEOHead({
     };
 
     setMetaTag("og:type", "website");
-    setMetaTag("og:title", ogTitle || title || "ParvatMittra");
+    setMetaTag("og:title", ogTitle || title || "HillMittra");
     setMetaTag(
       "og:description",
       ogDescription ||
         description ||
-        "ParvatMittra helps travelers discover calm, premium mountain experiences.",
+        "HillMittra helps travelers discover calm, premium mountain experiences.",
     );
     setMetaTag("og:url", ogUrl || canonicalUrl || window.location.href);
     if (image) {
@@ -67,12 +67,12 @@ export default function SEOHead({
     }
 
     setMetaTag("twitter:card", "summary_large_image");
-    setMetaTag("twitter:title", twitterTitle || title || "ParvatMittra");
+    setMetaTag("twitter:title", twitterTitle || title || "HillMittra");
     setMetaTag(
       "twitter:description",
       twitterDescription ||
         description ||
-        "ParvatMittra helps travelers discover calm, premium mountain experiences.",
+        "HillMittra helps travelers discover calm, premium mountain experiences.",
     );
     if (image) {
       setMetaTag("twitter:image", image);
