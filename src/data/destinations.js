@@ -71,7 +71,7 @@ export const destinations = [
       "Plan for early starts, light layers and a balance of rest and exploration. The town is at its most beautiful when you leave space for unhurried moments.",
     nearbyPlaces: ["auli", "nainital"],
     tags: ["river", "spiritual", "slow-travel"],
-    seoTitle: "Discover Rishikesh | ParvatMittra",
+    seoTitle: "Discover Rishikesh | HillMittra",
     seoDescription:
       "Explore Rishikesh with calm, premium guidance built around slow travel and mountain atmosphere.",
   },
@@ -147,7 +147,7 @@ export const destinations = [
       "Layer well, keep plans gentle and leave room for weather shifts. Auli rewards calm pacing far more than rushed itineraries.",
     nearbyPlaces: ["rishikesh", "nainital"],
     tags: ["snow", "alpine", "winter"],
-    seoTitle: "Discover Auli | ParvatMittra",
+    seoTitle: "Discover Auli | HillMittra",
     seoDescription:
       "Learn about Auli through editorial travel guidance, seasonal notes and calm alpine details.",
   },
@@ -223,7 +223,7 @@ export const destinations = [
       "Aim for early mornings and leave the middle of the day open for cafés, perspective and light wandering. It is a place designed to be enjoyed gently.",
     nearbyPlaces: ["rishikesh", "auli"],
     tags: ["lake", "heritage", "slow-travel"],
-    seoTitle: "Discover Nainital | ParvatMittra",
+    seoTitle: "Discover Nainital | HillMittra",
     seoDescription:
       "Step into Nainital through calm editorial guidance, scenic notes and meaningful travel context.",
   },

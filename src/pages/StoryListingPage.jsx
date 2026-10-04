@@ -72,7 +72,7 @@ export default function StoryListingPage() {
 
   const seo = getSeoMetadata(
     {
-      seoTitle: "Mountain Stories | ParvatMittra",
+      seoTitle: "Mountain Stories | HillMittra",
       seoDescription:
         "Read reflective stories about slow travel, mountain mornings and serene journeys across the hills.",
     },

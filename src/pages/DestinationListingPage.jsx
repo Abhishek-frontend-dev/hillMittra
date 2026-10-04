@@ -93,7 +93,7 @@ export default function DestinationListingPage() {
 
   const seo = getSeoMetadata(
     {
-      seoTitle: "Discover Destinations | ParvatMittra",
+      seoTitle: "Discover Destinations | HillMittra",
       seoDescription:
         "Browse a calm collection of Himalayan destinations shaped by atmosphere, pacing and premium editorial guidance.",
     },

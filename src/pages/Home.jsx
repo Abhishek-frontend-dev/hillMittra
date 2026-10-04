@@ -7,7 +7,7 @@ import SEOHead from "../components/SEOHead";
 import { getSeoMetadata } from "../utils/seo";
 
 import Hero from "../sections/Hero";
-import WhyParvatMittra from "../sections/whyParvatMittra";
+import WhyHillMittra from "../sections/whyHillMittra";
 import Places from "../sections/Places";
 import Guides from "../sections/Guides";
 import Weather from "../sections/Weather";
@@ -48,7 +48,7 @@ export default function Home({ scrollToSection }) {
       <NavBar />
       <main className="overflow-hidden">
         <Hero />
-        <WhyParvatMittra />
+        <WhyHillMittra />
         <Places />
         <Guides />
         <Weather />

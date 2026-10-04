@@ -43,7 +43,7 @@ export const guides = [
     ],
     relatedTags: ["slow-travel", "river", "lake"],
     featured: true,
-    seoTitle: "Budget Travel in the Hills | ParvatMittra",
+    seoTitle: "Budget Travel in the Hills | HillMittra",
     seoDescription:
       "Learn how to travel the hills thoughtfully and affordably with calm planning and strong local insight.",
   },
@@ -92,7 +92,7 @@ export const guides = [
     ],
     relatedTags: ["slow-travel", "safety", "alpine"],
     featured: true,
-    seoTitle: "Solo Travel in the Hills | ParvatMittra",
+    seoTitle: "Solo Travel in the Hills | HillMittra",
     seoDescription:
       "Read thoughtful guidance for calm, confident solo mountain travel.",
   },
@@ -141,7 +141,7 @@ export const guides = [
     ],
     relatedTags: ["winter", "snow", "alpine"],
     featured: true,
-    seoTitle: "Winter Packing for Mountain Travel | ParvatMittra",
+    seoTitle: "Winter Packing for Mountain Travel | HillMittra",
     seoDescription:
       "Use a refined packing approach for winter mountain travel that stays elegant and practical.",
   },
@@ -190,7 +190,7 @@ export const guides = [
     ],
     relatedTags: ["lake", "slow-travel", "family"],
     featured: false,
-    seoTitle: "Family-Friendly Hill Travel | ParvatMittra",
+    seoTitle: "Family-Friendly Hill Travel | HillMittra",
     seoDescription:
       "Create a gentle family mountain itinerary that feels calm, practical and memorable.",
   },
@@ -238,7 +238,7 @@ export const guides = [
     ],
     relatedTags: ["river", "safety", "slow-travel"],
     featured: false,
-    seoTitle: "Monsoon Travel in the Mountains | ParvatMittra",
+    seoTitle: "Monsoon Travel in the Mountains | HillMittra",
     seoDescription:
       "Understand how to approach mountain travel during the monsoon with practical care.",
   },
@@ -285,7 +285,7 @@ export const guides = [
     ],
     relatedTags: ["lake", "river", "food"],
     featured: false,
-    seoTitle: "Food-First Mountain Travel | ParvatMittra",
+    seoTitle: "Food-First Mountain Travel | HillMittra",
     seoDescription:
       "Plan your mountain journey around local food, warmth and a more grounded pace.",
   },
@@ -332,7 +332,7 @@ export const guides = [
     ],
     relatedTags: ["alpine", "snow", "adventure"],
     featured: false,
-    seoTitle: "Trekking Tips for Mountain Routes | ParvatMittra",
+    seoTitle: "Trekking Tips for Mountain Routes | HillMittra",
     seoDescription:
       "Learn how to make trekking days feel calm, prepared and deeply rewarding.",
   },
@@ -380,7 +380,7 @@ export const guides = [
     ],
     relatedTags: ["slow-travel", "planning", "river"],
     featured: false,
-    seoTitle: "Planning a Calm Mountain Trip | ParvatMittra",
+    seoTitle: "Planning a Calm Mountain Trip | HillMittra",
     seoDescription:
       "Build a trip that feels intentional, atmospheric and deeply restorative.",
   },

@@ -53,7 +53,7 @@ export default function StoryDetailPage() {
     url: seo.canonicalUrl,
     author: {
       "@type": "Organization",
-      name: "ParvatMittra",
+      name: "HillMittra",
     },
   };
 

@@ -44,7 +44,7 @@ export default function Stories() {
               Travel that feels like a chapter of your life.
             </h3>
             <p className="text-slate-300 leading-8">
-              ParvatMittra journeys are designed to create space for the moments
+              HillMittra journeys are designed to create space for the moments
               you remember: walking a ridge at first light, hearing the river
               below, and arriving in a village that feels like home.
             </p>

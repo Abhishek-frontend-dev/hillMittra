@@ -76,7 +76,7 @@ export default function GuideListingPage() {
 
   const seo = getSeoMetadata(
     {
-      seoTitle: "Travel Guides | ParvatMittra",
+      seoTitle: "Travel Guides | HillMittra",
       seoDescription:
         "Find practical guides for mountain travel, packing, budgets, solo trips and slow planning.",
     },

@@ -20,7 +20,7 @@ export default function Vision() {
               Building a better way to experience hills.
             </h2>
             <p className="text-slate-300 leading-8 sm:text-lg">
-              ParvatMittra is creating travel that respects mountain cultures,
+              HillMittra is creating travel that respects mountain cultures,
               prioritizes meaningful connections and brings cinematic mountain
               experiences into a calm, curated journey.
             </p>
@@ -49,7 +49,7 @@ export default function Vision() {
                 to="/about"
                 className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-950/20 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-950/35"
               >
-                About ParvatMittra
+                About HillMittra
               </Link>
             </div>
           </div>

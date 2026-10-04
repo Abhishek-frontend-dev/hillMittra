@@ -10,7 +10,7 @@ export default function Places() {
         <SectionHeading
           overline="Destinations"
           title="Three mountain journeys with cinematic quietness"
-          description="Every destination carries its own rhythm. ParvatMittra reveals hills that balance adventure, calm and memorable stay experiences."
+          description="Every destination carries its own rhythm. HillMittra reveals hills that balance adventure, calm and memorable stay experiences."
         />
 
         <div className="mt-14 grid gap-8 lg:grid-cols-3">

@@ -54,7 +54,7 @@ export default function GuideDetailPage() {
     url: seo.canonicalUrl,
     author: {
       "@type": "Organization",
-      name: "ParvatMittra",
+      name: "HillMittra",
     },
   };
 

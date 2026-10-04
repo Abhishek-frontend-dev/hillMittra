@@ -62,7 +62,7 @@ export default function DestinationDetailPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    name: "ParvatMittra",
+    name: "HillMittra",
     description: seo.description,
     url: seo.canonicalUrl,
     about: destination.title || destination.name,

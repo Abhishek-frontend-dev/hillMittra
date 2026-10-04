@@ -107,7 +107,7 @@ export default function WeatherPage() {
 
   const seo = getSeoMetadata(
     {
-      seoTitle: "Weather Tool | ParvatMittra",
+      seoTitle: "Weather Tool | HillMittra",
       seoDescription:
         "Use a calm, live weather planning tool for mountain destinations with smart recommendations and travel comfort insight.",
     },

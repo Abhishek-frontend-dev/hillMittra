@@ -26,15 +26,15 @@ const values = [
 const socials = [
   { label: "Instagram", href: "https://instagram.com" },
   { label: "Pinterest", href: "https://pinterest.com" },
-  { label: "Email", href: "mailto:hello@parvatmittra.com" },
+  { label: "Email", href: "mailto:hello@hillmittra.com" },
 ];
 
 export default function About() {
   const seo = getSeoMetadata(
     {
-      seoTitle: "About ParvatMittra | Mountain Travel Reimagined",
+      seoTitle: "About HillMittra | Mountain Travel Reimagined",
       seoDescription:
-        "Learn about ParvatMittra’s premium editorial approach to mountain travel, stories and thoughtful planning.",
+        "Learn about HillMittra’s premium editorial approach to mountain travel, stories and thoughtful planning.",
     },
     "about",
   );
@@ -54,15 +54,15 @@ export default function About() {
               className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-[0_30px_120px_-70px_rgba(15,23,42,0.95)] sm:p-10"
             >
               <p className="text-sm uppercase tracking-[0.3em] text-emerald-200/80">
-                About ParvatMittra
+                About HillMittra
               </p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
                 A quieter kind of mountain travel, designed with intention.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-                ParvatMittra is a carefully crafted travel companion for
-                travelers who want the Himalaya to feel intimate, cinematic and
-                deeply human.
+                HillMittra is a carefully crafted travel companion for travelers
+                who want the Himalaya to feel intimate, cinematic and deeply
+                human.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link

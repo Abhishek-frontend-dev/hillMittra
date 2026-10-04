@@ -1,7 +1,7 @@
 const resources = {
   en: {
     translation: {
-      appName: "ParvatMittra",
+      appName: "HillMittra",
       home: "Home",
       destinations: "Destinations",
       guides: "Guides",

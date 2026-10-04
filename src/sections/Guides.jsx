@@ -10,7 +10,7 @@ export default function Guides() {
         <SectionHeading
           overline="Travel guides"
           title="Field notes for a more thoughtful mountain journey"
-          description="Preview the stories, route ideas and regional insights that make ParvatMittra travel more intentional, cinematic and grounded."
+          description="Preview the stories, route ideas and regional insights that make HillMittra travel more intentional, cinematic and grounded."
         />
 
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
