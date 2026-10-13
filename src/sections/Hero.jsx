@@ -4,7 +4,10 @@ import mountainVideo from "../assets/images/video/mountain-view.mp4";
 
 export default function Hero() {
   return (
-    <section id="home" className="home-hero relative min-h-[88vh] overflow-hidden lg:min-h-screen">
+    <section
+      id="home"
+      className="home-hero relative min-h-[88vh] overflow-hidden lg:min-h-screen"
+    >
       <div className="pointer-events-none absolute inset-0">
         <video
           src={mountainVideo}
@@ -45,7 +48,7 @@ export default function Hero() {
             </Link>
             <Link
               to="/guides"
-              className="inline-flex min-h-12 min-w-[220px] items-center justify-center rounded-full border border-white/75 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white hover:text-brand-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className="inline-flex min-h-12 min-w-[220px] items-center justify-center rounded-full border border-white/75 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:text-brand-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Discover Guides
             </Link>
