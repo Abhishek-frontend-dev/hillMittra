@@ -49,10 +49,10 @@ export default function NavBar() {
       initial={{ opacity: 0, y: -18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
-      className={`fixed inset-x-0 top-0 z-50 border-b border-emerald-300/10 transition-all duration-500 ${
+      className={`site-nav fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-all duration-500 ${
         scrolled || menuOpen || isDetailPage
-          ? "bg-emerald-950/90 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.25)]"
-          : "bg-transparent"
+          ? "bg-emerald-950 shadow-[0_8px_30px_rgba(16,38,26,0.28)]"
+          : "bg-emerald-950/95 shadow-[0_4px_20px_rgba(16,38,26,0.2)] backdrop-blur-lg"
       }`}
     >
       <div
@@ -71,12 +71,12 @@ export default function NavBar() {
           />
         </button>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-6 xl:gap-7 lg:flex">
           {navLinks.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="relative text-sm font-semibold uppercase tracking-[0.2em] text-emerald-100 transition-all duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-amber-300 after:transition-all after:duration-300 hover:text-amber-300 hover:after:w-full"
+              className="relative text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-yellow after:transition-all after:duration-300 hover:text-amber-300 hover:after:w-full xl:text-sm"
             >
               {item.label}
             </Link>
@@ -86,7 +86,7 @@ export default function NavBar() {
         <div className="hidden items-center gap-4 lg:flex">
           <Link
             to="/destinations"
-            className="inline-flex rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-emerald-500"
+            className="inline-flex rounded-full bg-brand-yellow px-5 py-2.5 text-sm font-bold text-brand-green shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
             Explore Hills
           </Link>
@@ -96,7 +96,7 @@ export default function NavBar() {
           type="button"
           aria-label="Toggle navigation menu"
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/10 text-emerald-100 backdrop-blur-sm transition hover:bg-white/20 lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 lg:hidden"
         >
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -109,7 +109,7 @@ export default function NavBar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 24 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="absolute right-0 top-full w-full max-w-sm border-l border-emerald-300/10 bg-emerald-950/95 px-5 py-5 shadow-2xl backdrop-blur-xl lg:hidden"
+            className="absolute right-0 top-full w-full max-w-sm border-l border-white/10 bg-emerald-950 px-5 py-5 shadow-xl lg:hidden"
           >
             <nav className="flex flex-col gap-3">
               {navLinks.map((item) => (
@@ -117,7 +117,7 @@ export default function NavBar() {
                   key={item.to}
                   to={item.to}
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-2xl px-3 py-3 text-sm font-medium uppercase tracking-[0.2em] text-emerald-100 transition hover:bg-white/10 hover:text-amber-300"
+                  className="rounded-2xl px-3 py-3 text-sm font-medium uppercase tracking-[0.16em] text-white transition hover:bg-white/10 hover:text-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
                 >
                   {item.label}
                 </Link>
@@ -127,7 +127,7 @@ export default function NavBar() {
             <Link
               to="/destinations"
               onClick={() => setMenuOpen(false)}
-              className="mt-4 inline-flex rounded-full bg-emerald-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-500"
+              className="mt-4 inline-flex rounded-full bg-brand-yellow px-5 py-3 text-sm font-bold text-brand-green transition hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Explore Hills
             </Link>

@@ -5,7 +5,7 @@ import { destinations } from "../data/destinations";
 
 export default function Places() {
   return (
-    <section id="places" className="py-24">
+    <section id="places" className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <SectionHeading
           overline="Destinations"
@@ -13,7 +13,7 @@ export default function Places() {
           description="Every destination carries its own rhythm. HillMittra reveals hills that balance adventure, calm and memorable stay experiences."
         />
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {destinations.slice(0, 3).map((destination, index) => (
             <motion.article
               key={destination.id}
@@ -30,7 +30,7 @@ export default function Places() {
                   className="h-80 w-full object-cover transition duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="image-overlay absolute inset-x-0 bottom-0 p-6">
                   <p className="text-sm uppercase tracking-[0.28em] text-white">
                     {destination.name}
                   </p>
@@ -49,7 +49,7 @@ export default function Places() {
         <div className="mt-10">
           <Link
             to="/destinations"
-            className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-950/20 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-950/35"
+            className="inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-950/10 transition hover:-translate-y-0.5 hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500"
           >
             View All Destinations
           </Link>

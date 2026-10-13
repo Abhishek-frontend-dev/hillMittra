@@ -5,7 +5,7 @@ export default function WhyHillMittra() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden border-t border-white/5 py-24"
+      className="relative overflow-hidden border-t border-emerald-900/10 py-16 sm:py-20"
     >
       <div className="absolute inset-y-0 right-0 hidden w-1/3 bg-[radial-gradient(circle_at_top_right,_rgba(148,163,184,0.16),_transparent_30%)] lg:block" />
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">

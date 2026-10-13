@@ -115,7 +115,7 @@ export default function WeatherPage() {
   );
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.12),_transparent_35%),linear-gradient(135deg,_#020617_0%,_#0f172a_45%,_#111827_100%)] text-white">
+    <div className="site-page weather-page min-h-screen">
       <SEOHead {...seo} />
       <NavBar />
 
@@ -126,7 +126,7 @@ export default function WeatherPage() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-[0_30px_120px_-70px_rgba(15,23,42,0.9)] sm:p-10"
+              className="weather-panel rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-[0_30px_120px_-70px_rgba(15,23,42,0.18)] sm:p-10"
             >
               <p className="text-sm uppercase tracking-[0.3em] text-emerald-200/80">
                 Weather tool
@@ -139,7 +139,7 @@ export default function WeatherPage() {
                 tool suggest the kind of day that feels right for your route.
               </p>
 
-              <div className="mt-8 rounded-[1.7rem] border border-white/10 bg-white/5 p-5">
+              <div className="weather-inset mt-8 rounded-[1.7rem] border border-white/10 bg-white/5 p-5">
                 <label
                   className="text-sm font-medium uppercase tracking-[0.3em] text-slate-400"
                   htmlFor="destination-search"
@@ -160,7 +160,7 @@ export default function WeatherPage() {
                       key={destination.id}
                       type="button"
                       onClick={() => handleDestinationSelect(destination)}
-                      className={`rounded-full px-4 py-2 text-sm transition ${selectedDestination?.id === destination.id ? "bg-emerald-500 text-white" : "bg-white/10 text-slate-200 hover:bg-white/20"}`}
+                      className={`rounded-full px-4 py-2 text-sm transition ${selectedDestination?.id === destination.id ? "weather-destination-selected bg-emerald-500 text-white" : "bg-white/10 text-slate-200 hover:bg-white/20"}`}
                     >
                       {destination.name}
                     </button>
@@ -179,7 +179,7 @@ export default function WeatherPage() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="rounded-[2rem] border border-emerald-300/20 bg-gradient-to-br from-emerald-950/70 via-slate-900/80 to-slate-950 p-8 shadow-[0_30px_120px_-70px_rgba(16,185,129,0.55)] sm:p-10"
+              className="weather-results rounded-[2rem] border border-sky-500/25 bg-gradient-to-br from-emerald-950/70 via-slate-900/80 to-slate-950 p-8 shadow-[0_30px_120px_-70px_rgba(67,146,179,0.25)] sm:p-10"
             >
               {loading ? (
                 <div className="space-y-4">
@@ -219,7 +219,7 @@ export default function WeatherPage() {
                   </div>
 
                   <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                    <div className="rounded-[1.5rem] bg-white/10 p-5">
+                    <div className="weather-metric rounded-[1.5rem] bg-white/10 p-5">
                       <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                         Temp
                       </p>
@@ -227,7 +227,7 @@ export default function WeatherPage() {
                         {Math.round(weather?.temperature ?? 14)}°C
                       </p>
                     </div>
-                    <div className="rounded-[1.5rem] bg-white/10 p-5">
+                    <div className="weather-metric rounded-[1.5rem] bg-white/10 p-5">
                       <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                         Rain
                       </p>
@@ -235,7 +235,7 @@ export default function WeatherPage() {
                         {weather?.precipitation ?? 10}%
                       </p>
                     </div>
-                    <div className="rounded-[1.5rem] bg-white/10 p-5">
+                    <div className="weather-metric rounded-[1.5rem] bg-white/10 p-5">
                       <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                         Wind
                       </p>
@@ -245,8 +245,8 @@ export default function WeatherPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 rounded-[1.7rem] border border-white/10 bg-slate-950/60 p-6">
-                    <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
+                  <div className="weather-condition mt-8 rounded-[1.7rem] border border-sky-500/20 bg-slate-950/60 p-6">
+                    <p className="text-sm uppercase tracking-[0.3em] text-sky-500">
                       Condition
                     </p>
                     <p className="mt-3 text-2xl font-semibold text-white">
@@ -261,7 +261,7 @@ export default function WeatherPage() {
                         {weather.forecast.map((item) => (
                           <div
                             key={item.day}
-                            className="rounded-[1.2rem] border border-white/10 bg-white/5 p-3"
+                            className="weather-forecast rounded-[1.2rem] border border-white/10 bg-white/5 p-3"
                           >
                             <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
                               {item.day}
@@ -289,7 +289,7 @@ export default function WeatherPage() {
 
         <section className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 lg:px-10">
           <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
+            <div className="weather-panel rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                 Trip recommendation
               </p>
@@ -297,7 +297,7 @@ export default function WeatherPage() {
                 {recommendation?.reason ??
                   "A calm day is best shaped by flexible plans."}
               </h3>
-              <div className="mt-8 rounded-[1.6rem] border border-emerald-400/10 bg-emerald-500/10 p-6">
+              <div className="weather-inset mt-8 rounded-[1.6rem] border border-emerald-400/10 bg-emerald-500/10 p-6">
                 <p className="text-sm uppercase tracking-[0.3em] text-emerald-200/80">
                   Suggested fit
                 </p>
@@ -311,7 +311,7 @@ export default function WeatherPage() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
+            <div className="weather-panel rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                 Pack for the day
               </p>
@@ -319,7 +319,7 @@ export default function WeatherPage() {
                 {packing.map((item) => (
                   <div
                     key={item.name}
-                    className="flex items-start justify-between gap-4 rounded-[1.3rem] border border-white/10 bg-white/5 px-4 py-4"
+                    className="weather-inset flex items-start justify-between gap-4 rounded-[1.3rem] border border-white/10 bg-white/5 px-4 py-4"
                   >
                     <div>
                       <p className="text-base font-semibold text-white">
@@ -336,7 +336,7 @@ export default function WeatherPage() {
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
+            <div className="weather-panel rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                 Suggested activities
               </p>
@@ -344,7 +344,7 @@ export default function WeatherPage() {
                 {activities.map((activity) => (
                   <div
                     key={activity.title}
-                    className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5"
+                    className="weather-inset rounded-[1.5rem] border border-white/10 bg-white/5 p-5"
                   >
                     <p className="text-lg font-semibold text-white">
                       {activity.title}
@@ -357,7 +357,7 @@ export default function WeatherPage() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
+            <div className="weather-panel rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                 Safety notes
               </p>
@@ -365,7 +365,7 @@ export default function WeatherPage() {
                 {safetyTips.map((tip) => (
                   <li
                     key={tip}
-                    className="rounded-[1.3rem] border border-white/10 bg-white/5 px-4 py-4 text-sm leading-7 text-slate-300"
+                    className="weather-inset rounded-[1.3rem] border border-white/10 bg-white/5 px-4 py-4 text-sm leading-7 text-slate-300"
                   >
                     {tip}
                   </li>
@@ -375,7 +375,7 @@ export default function WeatherPage() {
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
+            <div className="weather-panel rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                 Related guide
               </p>
@@ -402,7 +402,7 @@ export default function WeatherPage() {
               )}
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
+            <div className="weather-panel rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                 Nearby inspiration
               </p>

@@ -4,7 +4,7 @@ import { stories } from "../data/stories";
 
 export default function Stories() {
   return (
-    <section id="stories" className="py-24">
+    <section id="stories" className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <motion.div
@@ -20,7 +20,7 @@ export default function Stories() {
               className="h-[520px] w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8">
+            <div className="image-overlay absolute bottom-0 left-0 right-0 p-8">
               <p className="text-sm uppercase tracking-[0.32em] text-slate-300">
                 Story highlight
               </p>

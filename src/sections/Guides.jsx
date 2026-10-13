@@ -5,7 +5,7 @@ import { guides } from "../data/guides";
 
 export default function Guides() {
   return (
-    <section id="guides" className="py-24">
+    <section id="guides" className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <SectionHeading
           overline="Travel guides"
@@ -13,7 +13,7 @@ export default function Guides() {
           description="Preview the stories, route ideas and regional insights that make HillMittra travel more intentional, cinematic and grounded."
         />
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {guides.slice(0, 3).map((guide, index) => (
             <motion.article
               key={guide.id}
@@ -49,7 +49,7 @@ export default function Guides() {
         <div className="mt-10">
           <Link
             to="/guides"
-            className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-950/20 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-950/35"
+            className="inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-950/10 transition hover:-translate-y-0.5 hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500"
           >
             Explore All Guides
           </Link>

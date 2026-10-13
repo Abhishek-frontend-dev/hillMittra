@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 export default function Vision() {
   return (
-    <section id="vision" className="border-t border-white/5 py-24">
+    <section id="vision" className="border-t border-emerald-900/10 py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.75 }}
-          className="rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-slate-900/95 via-slate-950/90 to-slate-900/95 p-10 sm:p-14"
+          className="rounded-[2.25rem] border border-emerald-900/10 bg-gradient-to-br from-slate-900/95 via-slate-950/90 to-slate-900/95 p-8 shadow-xl shadow-emerald-950/5 sm:p-12"
         >
           <div className="max-w-3xl space-y-6">
             <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
@@ -25,7 +25,7 @@ export default function Vision() {
               experiences into a calm, curated journey.
             </p>
             <div className="grid gap-6 sm:grid-cols-2">
-              <div className="rounded-[2rem] bg-white/5 p-6 ring-1 ring-white/10">
+              <div className="rounded-[2rem] bg-emerald-50 p-6 ring-1 ring-emerald-900/10">
                 <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                   Sustainable design
                 </p>
@@ -34,7 +34,7 @@ export default function Vision() {
                   minimize impact on delicate hill ecosystems.
                 </p>
               </div>
-              <div className="rounded-[2rem] bg-white/5 p-6 ring-1 ring-white/10">
+              <div className="rounded-[2rem] bg-emerald-50 p-6 ring-1 ring-emerald-900/10">
                 <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                   Human-led hospitality
                 </p>
@@ -47,7 +47,7 @@ export default function Vision() {
             <div className="pt-2">
               <Link
                 to="/about"
-                className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-950/20 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-950/35"
+                className="inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-950/10 transition hover:-translate-y-0.5 hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500"
               >
                 About HillMittra
               </Link>

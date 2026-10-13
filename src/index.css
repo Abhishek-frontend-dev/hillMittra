@@ -1,9 +1,36 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-yellow: #fcc535;
+  --color-brand-green: #2c583d;
+  --color-brand-blue: #4392b3;
+  --color-brand-white: #ffffff;
+  --color-emerald-50: #f1f6f2;
+  --color-emerald-100: #e5eee7;
+  --color-emerald-200: #c7d9cb;
+  --color-emerald-300: #2c583d;
+  --color-emerald-400: #3c704f;
+  --color-emerald-500: #2c583d;
+  --color-emerald-600: #244a33;
+  --color-emerald-700: #1e402c;
+  --color-emerald-800: #193625;
+  --color-emerald-900: #142d1f;
+  --color-emerald-950: #10261a;
+  --color-amber-200: #ffdf83;
+  --color-amber-300: #fcc535;
+  --color-amber-400: #e9ad16;
+  --color-sky-300: #4392b3;
+  --color-sky-400: #337c9b;
+  --color-sky-500: #2d718f;
+  --color-cyan-300: #4392b3;
+  --color-cyan-400: #337c9b;
+  --color-cyan-500: #2d718f;
+}
+
 :root {
-  color-scheme: dark;
-  color: #eef4e8;
-  background: #5f6562;
+  color-scheme: light;
+  color: #20372a;
+  background: #f7f8f4;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
 }
@@ -19,10 +46,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top left, rgba(134, 197, 93, 0.14), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.10), transparent 22%),
-    linear-gradient(180deg, #091b12 0%, #090f0b 100%);
-  color: #eef4e8;
+  background: #f7f8f4;
+  color: #20372a;
   font-size: 18px;
   line-height: 1.75;
   overflow-wrap: anywhere;
@@ -66,17 +91,279 @@ a {
   text-decoration: none;
 }
 
-.max-w-7xl {
-  max-width: none !important;
-}
-
 button,
 input,
 textarea {
   font: inherit;
 }
 
+.max-w-7xl {
+  max-width: none !important;
+}
+
 ::selection {
-  background: rgba(132, 204, 22, 0.2);
-  color: #eef4e8;
+  background: rgba(252, 197, 53, 0.45);
+  color: #20372a;
+}
+
+.site-page {
+  background: #f7f8f4 !important;
+  color: #20372a !important;
+}
+
+.site-page main > section#about {
+  background: #edf3ed;
+}
+
+.site-page main > section#places {
+  background: #ffffff;
+}
+
+.site-page main > section#guides {
+  background: #f4f6f1;
+}
+
+.site-page main > section#weather {
+  background: #edf4f5;
+}
+
+.site-page main > section#stories {
+  background: #ffffff;
+}
+
+.site-page main > section#vision {
+  background: #edf3ed;
+}
+
+.site-page [class*="rounded-"][class*="bg-slate-950"],
+.site-page [class*="rounded-"][class*="bg-slate-900"] {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+.site-page [class*="bg-gradient-to-br"][class*="via-slate-"] {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+.site-page [class*="border-white/"] {
+  border-color: #dce5dd !important;
+}
+
+.site-page [class*="text-slate-100"],
+.site-page [class*="text-slate-200"],
+.site-page [class*="text-slate-300"],
+.site-page [class*="text-slate-400"],
+.site-page [class*="text-slate-500"],
+.site-page [class*="text-slate-600"],
+.site-page [class*="text-slate-700"],
+.site-page [class*="text-slate-800"],
+.site-page [class*="text-slate-900"],
+.site-page [class*="text-slate-950"],
+.site-page [class*="text-white"] {
+  color: #20372a !important;
+}
+
+.site-page [class*="text-emerald-100"],
+.site-page [class*="text-emerald-200"] {
+  color: #2c583d !important;
+}
+
+.site-page [class*="text-emerald-300"],
+.site-page [class*="text-emerald-400"] {
+  color: #244a33 !important;
+}
+
+.site-page [class*="text-amber-200"],
+.site-page [class*="text-amber-300"],
+.site-page [class*="text-amber-400"] {
+  color: #765600 !important;
+}
+
+.site-page [class*="bg-emerald-"].text-white,
+.site-page .site-nav [class*="bg-emerald-"].text-white,
+.site-page .site-footer [class*="bg-emerald-"].text-white {
+  color: #ffffff !important;
+}
+
+.site-page .hero-content [class*="text-white"],
+.site-page .hero-content [class*="text-slate-"],
+.site-page .detail-hero [class*="text-white"],
+.site-page .detail-hero [class*="text-slate-"],
+.site-page .image-overlay [class*="text-white"],
+.site-page .image-overlay [class*="text-slate-"] {
+  color: #ffffff !important;
+}
+
+.site-page .hero-content .hero-description {
+  color: #ffffff !important;
+}
+
+.site-page .site-nav [class*="text-emerald-100"],
+.site-page .site-nav [class*="text-emerald-200"],
+.site-page .site-nav [class*="text-white"] {
+  color: #ffffff !important;
+}
+
+.site-page .site-nav [class*="text-amber-300"],
+.site-page .site-nav [class*="text-amber-400"] {
+  color: #fcc535 !important;
+}
+
+.site-page [class*="bg-emerald-"][class*="text-slate-950"],
+.site-page [class*="bg-emerald-950"][class*="text-emerald-100"],
+.site-page [class*="bg-emerald-950"][class*="text-emerald-200"] {
+  color: #ffffff !important;
+}
+
+.site-page .site-footer {
+  background: #193625 !important;
+  color: #ffffff !important;
+}
+
+.site-page .site-footer [class*="text-slate-"] {
+  color: #e5eee7 !important;
+}
+
+.site-page .site-footer [class*="text-white"] {
+  color: #ffffff !important;
+}
+
+.site-page input,
+.site-page select {
+  border-color: #cbd8ce;
+  background-color: #ffffff;
+  color: #20372a;
+}
+
+.site-page input::placeholder {
+  color: #66796b;
+}
+
+.site-page button:focus-visible,
+.site-page a:focus-visible,
+.site-page input:focus-visible,
+.site-page select:focus-visible {
+  outline: 3px solid #4392b3;
+  outline-offset: 3px;
+}
+
+.site-page .home-weather {
+  background: #eaf2f5;
+}
+
+.site-page .home-weather .weather-card {
+  border-color: #d2e2e9;
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+.site-page .home-weather .weather-forecast {
+  border: 0;
+  background: #2d718f !important;
+  color: #ffffff !important;
+}
+
+.site-page .home-weather .weather-forecast [class*="text-slate-"],
+.site-page .home-weather .weather-forecast [class*="text-white"] {
+  color: #ffffff !important;
+}
+
+.site-page .home-weather .weather-note {
+  background: #e6f1f5 !important;
+  box-shadow: inset 0 0 0 1px #c8dce5;
+}
+
+.site-page.weather-page {
+  background: #eaf2f5 !important;
+}
+
+.site-page.weather-page main > section {
+  background: #eaf2f5;
+}
+
+.site-page.weather-page .weather-panel {
+  border-color: #cbdfe7 !important;
+  background-color: #f7fbfc !important;
+  background-image: none !important;
+  box-shadow: 0 18px 50px -38px rgba(45, 113, 143, 0.34);
+}
+
+.site-page.weather-page .weather-panel [class*="text-white"],
+.site-page.weather-page .weather-panel [class*="text-slate-"] {
+  color: #20372a !important;
+}
+
+.site-page.weather-page .weather-panel .weather-destination-selected {
+  background-color: #2c583d !important;
+  color: #ffffff !important;
+}
+
+.site-page.weather-page .weather-results {
+  border-color: #2d718f !important;
+  background: #2d718f !important;
+  color: #ffffff !important;
+}
+
+.site-page.weather-page .weather-results [class*="text-white"],
+.site-page.weather-page .weather-results [class*="text-slate-"],
+.site-page.weather-page .weather-results [class*="text-emerald-"] {
+  color: #ffffff !important;
+}
+
+.site-page.weather-page .weather-results .weather-metric {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.14) !important;
+}
+
+.site-page.weather-page .weather-results .weather-condition {
+  border-color: rgba(255, 255, 255, 0.32) !important;
+  background: #e8f2f6 !important;
+}
+
+.site-page.weather-page .weather-results .weather-condition [class*="text-white"],
+.site-page.weather-page .weather-results .weather-condition [class*="text-slate-"] {
+  color: #20372a !important;
+}
+
+.site-page.weather-page .weather-results .weather-condition [class*="text-sky-"] {
+  color: #2d718f !important;
+}
+
+.site-page.weather-page .weather-forecast {
+  border-color: #cfE1e8 !important;
+  background: #ffffff !important;
+}
+
+.site-page.weather-page .weather-forecast [class*="text-slate-"],
+.site-page.weather-page .weather-forecast [class*="text-white"] {
+  color: #20372a !important;
+}
+
+.site-page.weather-page .weather-inset {
+  border-color: #cbdfe7 !important;
+  background: #e8f2f6 !important;
+}
+
+.site-page.weather-page .weather-inset [class*="text-white"],
+.site-page.weather-page .weather-inset [class*="text-slate-"] {
+  color: #20372a !important;
+}
+
+.site-page.weather-page .weather-panel .weather-inset {
+  background: #e8f2f6 !important;
+}
+
+.site-page.weather-page .weather-panel .weather-inset [class*="text-emerald-"] {
+  color: #2c583d !important;
+}
+
+.site-page.weather-page .weather-results [class*="text-amber-200"] {
+  color: #fff2c2 !important;
+}
+
+.site-page.weather-page .weather-panel .weather-inset button.weather-destination-selected,
+.site-page.weather-page .weather-panel .weather-inset button.weather-destination-selected.text-white {
+  background-color: #2c583d !important;
+  color: #ffffff !important;
 }

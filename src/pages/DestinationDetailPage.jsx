@@ -69,7 +69,7 @@ export default function DestinationDetailPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.12),_transparent_35%),linear-gradient(135deg,_#020617_0%,_#0f172a_45%,_#111827_100%)] text-white">
+    <div className="site-page min-h-screen">
       <SEOHead {...seo} image={destination.image} />
       <NavBar />
 
@@ -78,7 +78,7 @@ export default function DestinationDetailPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        <section className="relative overflow-hidden">
+        <section className="detail-hero relative overflow-hidden">
           <img
             src={destination.image}
             alt={destination.title || destination.name}

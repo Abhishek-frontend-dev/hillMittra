@@ -37,7 +37,7 @@ export default function Weather() {
     : null;
 
   return (
-    <section id="weather" className="py-24">
+    <section id="weather" className="home-weather py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <SectionHeading
           overline="Weather preview"
@@ -45,13 +45,13 @@ export default function Weather() {
           description="Travel planning with calm confidence. This preview introduces the weather tool without turning the page into a dashboard."
         />
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+        <div className="mt-10 grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.75 }}
-            className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-10 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]"
+            className="weather-card rounded-[2rem] border border-white/10 bg-slate-950/80 p-10 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.18)]"
           >
             <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
               Featured destination
@@ -87,7 +87,7 @@ export default function Weather() {
                 weather?.forecast?.map((item) => (
                   <div
                     key={item.day}
-                    className="rounded-[1.75rem] bg-white/5 p-5 ring-1 ring-white/10"
+                    className="weather-forecast rounded-[1.75rem] bg-white/5 p-5 ring-1 ring-white/10"
                   >
                     <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
                       {item.day}
@@ -109,7 +109,7 @@ export default function Weather() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.75, delay: 0.1 }}
-            className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900/90 via-slate-950/70 to-slate-900/85 p-10"
+            className="weather-card rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900/90 via-slate-950/70 to-slate-900/85 p-10"
           >
             <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
               Travel weather concept
@@ -121,7 +121,7 @@ export default function Weather() {
               This module introduces the weather tool as a calm, premium layer
               of planning information rather than a dense forecast screen.
             </p>
-            <div className="mt-10 space-y-4 rounded-[1.8rem] bg-white/5 p-6 ring-1 ring-white/10">
+            <div className="weather-note mt-10 space-y-4 rounded-[1.8rem] bg-white/5 p-6 ring-1 ring-white/10">
               <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
                 Trip highlight
               </p>
@@ -133,7 +133,7 @@ export default function Weather() {
             <div className="mt-8">
               <Link
                 to="/weather"
-                className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-950/20 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-950/35"
+                className="inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-950/10 transition hover:-translate-y-0.5 hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500"
               >
                 Check Weather Tool
               </Link>
