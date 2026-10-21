@@ -8,6 +8,7 @@ import StoryListingPage from "./pages/StoryListingPage";
 import StoryDetailPage from "./pages/StoryDetailPage";
 import WeatherPage from "./pages/WeatherPage";
 import AboutPage from "./pages/About";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/story/:slug" element={<StoryDetailPage />} />
         <Route path="/weather" element={<WeatherPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );

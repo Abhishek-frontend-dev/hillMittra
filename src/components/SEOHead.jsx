@@ -10,6 +10,7 @@ export default function SEOHead({
   twitterTitle,
   twitterDescription,
   image,
+  noindex,
 }) {
   useEffect(() => {
     const nextTitle = title || "HillMittra";
@@ -39,6 +40,19 @@ export default function SEOHead({
       tag.rel = "canonical";
       tag.href = canonicalUrl || window.location.href;
       document.head.appendChild(tag);
+    }
+
+    if (typeof noindex === "boolean") {
+      const robots = document.querySelector('meta[name="robots"]');
+      const content = noindex ? "noindex, follow" : "index, follow";
+      if (robots) {
+        robots.setAttribute("content", content);
+      } else {
+        const tag = document.createElement("meta");
+        tag.name = "robots";
+        tag.content = content;
+        document.head.appendChild(tag);
+      }
     }
 
     const setMetaTag = (property, contentValue) => {
@@ -87,6 +101,7 @@ export default function SEOHead({
     twitterTitle,
     twitterDescription,
     image,
+    noindex,
   ]);
 
   return null;

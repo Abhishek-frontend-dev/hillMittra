@@ -10,6 +10,30 @@ import { getSeoMetadata } from "../utils/seo";
 const DESKTOP_PAGE_SIZE = 6;
 const MOBILE_PAGE_SIZE = 4;
 
+// Season values in data are descriptive strings (e.g. "March to June,
+// September to November"), so filter options match on the months they name.
+const SEASON_FILTERS = [
+  { value: "Year-round", pattern: /year-round/i },
+  { value: "Winter", pattern: /winter|december|january|february/i },
+  { value: "Spring", pattern: /spring|march|april/i },
+  { value: "Summer", pattern: /summer|may|june/i },
+  { value: "Monsoon", pattern: /monsoon|july|august/i },
+  { value: "Autumn", pattern: /autumn|september|october|november/i },
+];
+
+// Region and category options derive from the data so newly added
+// destinations are always filterable.
+const regionOptions = [
+  "All",
+  ...Array.from(new Set(destinations.map((item) => item.region).filter(Boolean))),
+];
+const categoryOptions = [
+  "All",
+  ...Array.from(
+    new Set(destinations.map((item) => item.category).filter(Boolean)),
+  ).sort(),
+];
+
 export default function DestinationListingPage() {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("All");
@@ -58,7 +82,12 @@ export default function DestinationListingPage() {
       const matchesRegion = region === "All" || destination.region === region;
       const matchesCategory =
         category === "All" || destination.category === category;
-      const matchesSeason = season === "All" || destination.season === season;
+      const matchesSeason =
+        season === "All" ||
+        SEASON_FILTERS.some(
+          (filter) =>
+            filter.value === season && filter.pattern.test(destination.season ?? ""),
+        );
 
       return matchesSearch && matchesRegion && matchesCategory && matchesSeason;
     });
@@ -196,9 +225,13 @@ export default function DestinationListingPage() {
                     className="mt-3 w-full rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none"
                   >
                     <option value="All">All regions</option>
-                    <option value="Uttarakhand">Uttarakhand</option>
-                    <option value="Garhwal">Garhwal</option>
-                    <option value="Kumaon">Kumaon</option>
+                    {regionOptions
+                      .filter((option) => option !== "All")
+                      .map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
                   </select>
                 </div>
 
@@ -212,9 +245,13 @@ export default function DestinationListingPage() {
                     className="mt-3 w-full rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none"
                   >
                     <option value="All">All categories</option>
-                    <option value="River Retreat">River Retreat</option>
-                    <option value="Snow Escape">Snow Escape</option>
-                    <option value="Lake Escape">Lake Escape</option>
+                    {categoryOptions
+                      .filter((option) => option !== "All")
+                      .map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
                   </select>
                 </div>
 
@@ -228,10 +265,11 @@ export default function DestinationListingPage() {
                     className="mt-3 w-full rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none"
                   >
                     <option value="All">Any season</option>
-                    <option value="Year-round">Year-round</option>
-                    <option value="Winter">Winter</option>
-                    <option value="Autumn">Autumn</option>
-                    <option value="Spring">Spring</option>
+                    {SEASON_FILTERS.map((filter) => (
+                      <option key={filter.value} value={filter.value}>
+                        {filter.value}
+                      </option>
+                    ))}
                   </select>
                 </div>
 
@@ -274,11 +312,11 @@ export default function DestinationListingPage() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.06 }}
-                    className="group overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]"
+                    className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]"
                   >
                     <Link
                       to={`/destination/${destination.slug}`}
-                      className="block"
+                      className="flex h-full flex-col"
                     >
                       <div className="relative h-72 overflow-hidden">
                         <img
@@ -291,25 +329,25 @@ export default function DestinationListingPage() {
                           {destination.category}
                         </div>
                       </div>
-                      <div className="p-7">
-                        <div className="flex items-center justify-between gap-3">
-                          <div>
-                            <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
-                              {destination.region}
-                            </p>
-                            <h3 className="mt-2 text-2xl font-semibold text-white">
-                              {destination.title || destination.name}
-                            </h3>
-                          </div>
-                          <span className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.24em] text-slate-300">
+                      <div className="flex flex-1 flex-col p-7">
+                        <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                          {destination.region}
+                        </p>
+                        <h3 className="mt-2 text-2xl font-semibold text-white [text-wrap:balance]">
+                          {destination.title || destination.name}
+                        </h3>
+                        <div className="mt-3">
+                          <span className="inline-block max-w-full rounded-2xl border border-white/10 px-3 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-emerald-100/90 [text-wrap:balance]">
                             {destination.season}
                           </span>
                         </div>
-                        <p className="mt-4 text-sm leading-7 text-slate-300">
+                        <p className="mt-4 text-sm leading-7 text-slate-300 [text-wrap:pretty]">
                           {destination.subtitle || destination.tagline}
                         </p>
-                        <div className="mt-6 inline-flex rounded-full border border-emerald-300/30 bg-emerald-950/20 px-4 py-2 text-sm font-semibold text-emerald-100 transition group-hover:bg-emerald-950/35">
-                          View destination
+                        <div className="mt-auto pt-6">
+                          <div className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-950/20 px-4 py-2 text-sm font-semibold text-emerald-100 transition group-hover:bg-emerald-950/35">
+                            View destination
+                          </div>
                         </div>
                       </div>
                     </Link>

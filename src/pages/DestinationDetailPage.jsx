@@ -1,5 +1,6 @@
 import { useMemo } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import NotFoundPage from "./NotFoundPage";
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -7,11 +8,7 @@ import SEOHead from "../components/SEOHead";
 import { destinations } from "../data/destinations";
 import { guides } from "../data/guides";
 import { stories } from "../data/stories";
-import {
-  getRelatedDestinations,
-  getRelatedGuides,
-  getRelatedStories,
-} from "../utils/contentRelations";
+import { getRelatedGuides, getRelatedStories } from "../utils/contentRelations";
 import { getSeoMetadata } from "../utils/seo";
 
 export default function DestinationDetailPage() {
@@ -23,7 +20,7 @@ export default function DestinationDetailPage() {
   );
 
   if (!destination) {
-    return <Navigate to="/destinations" replace />;
+    return <NotFoundPage />;
   }
 
   const relatedGuides = getRelatedGuides(
@@ -82,10 +79,10 @@ export default function DestinationDetailPage() {
           <img
             src={destination.image}
             alt={destination.title || destination.name}
-            className="h-[72vh] w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.25),rgba(2,6,23,0.72))]" />
-          <div className="absolute inset-x-0 bottom-0 mx-auto flex w-full max-w-none flex-col gap-8 px-6 py-12 sm:px-8 lg:px-10 lg:py-16">
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.35),rgba(2,6,23,0.78))]" />
+          <div className="relative mx-auto flex min-h-[78vh] w-full max-w-none flex-col justify-end gap-8 px-6 pb-10 pt-44 sm:px-8 lg:min-h-[82vh] lg:px-10 lg:pb-14">
             <div className="max-w-3xl">
               <p className="text-sm uppercase tracking-[0.32em] text-slate-300">
                 {destination.region}
@@ -93,14 +90,14 @@ export default function DestinationDetailPage() {
               <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
                 {destination.title || destination.name}
               </h1>
-              <p className="mt-6 text-lg leading-8 text-slate-200">
+              <p className="mt-6 text-lg leading-8 text-slate-200 [text-wrap:balance]">
                 {destination.subtitle}
               </p>
             </div>
-            <div className="grid gap-4 rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 backdrop-blur md:grid-cols-4 sm:grid-cols-2">
+            <div className="grid gap-4 rounded-[2rem] border border-emerald-100/25 bg-[#214b37]/60 p-6 shadow-[0_30px_90px_-40px_rgba(33,75,55,0.95)] backdrop-blur-xl md:grid-cols-4 sm:grid-cols-2">
               {destination.quickFacts?.map((fact) => (
                 <div key={fact.label}>
-                  <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                  <p className="text-sm uppercase tracking-[0.28em] text-white">
                     {fact.label}
                   </p>
                   <p className="mt-2 text-lg font-semibold text-white">
@@ -140,28 +137,50 @@ export default function DestinationDetailPage() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
-              <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
-                Travel style
-              </p>
-              <div className="mt-6 space-y-4">
-                {destination.quickFacts?.map((fact) => (
-                  <div
-                    key={`${fact.label}-detail`}
-                    className="rounded-[1.4rem] border border-white/10 bg-white/5 p-4"
-                  >
-                    <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
-                      {fact.label}
-                    </p>
-                    <p className="mt-2 text-base font-medium text-white">
-                      {fact.value}
-                    </p>
-                  </div>
-                ))}
+            <div className="space-y-8 lg:sticky lg:top-32 lg:self-start">
+              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
+                <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                  Travel style
+                </p>
+                <div className="mt-6 space-y-4">
+                  {destination.quickFacts?.map((fact) => (
+                    <div
+                      key={`${fact.label}-detail`}
+                      className="rounded-[1.4rem] border border-white/10 bg-white/5 p-4"
+                    >
+                      <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                        {fact.label}
+                      </p>
+                      <p className="mt-2 text-base font-medium text-white">
+                        {fact.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
+
+        {destination.gettingThere ? (
+          <section className="border-t border-white/10 py-20">
+            <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+              <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 sm:p-12 lg:grid-cols-[0.38fr_0.62fr]">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.28em] text-emerald-300/90">
+                    Getting there
+                  </p>
+                  <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
+                    The route into this landscape
+                  </h2>
+                </div>
+                <p className="text-lg leading-8 text-slate-300">
+                  {destination.gettingThere}
+                </p>
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         <section className="border-t border-white/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
@@ -183,22 +202,58 @@ export default function DestinationDetailPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.55, delay: index * 0.06 }}
-                  className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-7"
+                  className="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80"
                 >
-                  <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
-                    {index + 1}
-                  </p>
-                  <h3 className="mt-4 text-xl font-semibold text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-300">
-                    {item.description}
-                  </p>
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className="h-44 w-full object-cover"
+                    />
+                  ) : null}
+                  <div className="p-7">
+                    <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                      {index + 1}
+                    </p>
+                    <h3 className="mt-4 text-xl font-semibold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-slate-300">
+                      {item.description}
+                    </p>
+                  </div>
                 </motion.article>
               ))}
             </div>
           </div>
         </section>
+
+        {destination.gallery?.length ? (
+          <section className="border-t border-white/10 py-20">
+            <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+              <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+                Moments
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">
+                Scenes from this landscape
+              </h2>
+              <div className="mt-10 grid gap-6 md:grid-cols-2">
+                {destination.gallery.map((src, index) => (
+                  <img
+                    key={`${src}-${index}`}
+                    src={src}
+                    alt={`Scenic view of ${
+                      destination.title || destination.name
+                    }`}
+                    loading="lazy"
+                    className="h-72 w-full rounded-[2rem] border border-white/10 object-cover"
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         <section className="border-t border-white/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
@@ -234,14 +289,24 @@ export default function DestinationDetailPage() {
                   {destination.food?.map((item) => (
                     <div
                       key={item.name}
-                      className="rounded-[1.6rem] border border-white/10 bg-white/5 p-5"
+                      className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-white/5"
                     >
-                      <h3 className="text-lg font-semibold text-white">
-                        {item.name}
-                      </h3>
-                      <p className="mt-3 text-sm leading-7 text-slate-300">
-                        {item.description}
-                      </p>
+                      {item.image ? (
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          loading="lazy"
+                          className="h-36 w-full object-cover"
+                        />
+                      ) : null}
+                      <div className="p-5">
+                        <h3 className="text-lg font-semibold text-white">
+                          {item.name}
+                        </h3>
+                        <p className="mt-3 text-sm leading-7 text-slate-300">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>

@@ -1,0 +1,17 @@
+# HillMittra SPA server config (Hostinger, Apache/LiteSpeed).
+# Serves index.html for any path that does not match a real file, so deep
+# links such as /destination/rishikesh load the app instead of returning the
+# server's 404 page when opened directly or refreshed.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Never rewrite real files or directories (css, js, images, sitemap.xml, robots.txt, ...)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Let missing asset-like URLs return a real error instead of the app shell
+  RewriteCond %{REQUEST_URI} !\.(?:css|js|map|json|xml|txt|jpg|jpeg|png|gif|webp|svg|ico|pdf|woff|woff2)$ [NC]
+
+  RewriteRule . /index.html [L]
+</IfModule>

@@ -34,10 +34,10 @@ export default function Places() {
                   <p className="text-sm uppercase tracking-[0.28em] text-white">
                     {destination.name}
                   </p>
-                  <h3 className="mt-3 text-2xl font-semibold text-white">
+                  <h3 className="mt-3 text-2xl font-semibold text-white [text-wrap:balance]">
                     {destination.tagline}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-300">
+                  <p className="mt-3 text-sm leading-6 text-slate-300 [text-wrap:pretty]">
                     {destination.description}
                   </p>
                 </div>

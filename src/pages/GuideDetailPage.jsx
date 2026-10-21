@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Link, useParams } from "react-router-dom";
+import NotFoundPage from "./NotFoundPage";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import SEOHead from "../components/SEOHead";
@@ -22,7 +22,7 @@ export default function GuideDetailPage() {
   );
 
   if (!guide) {
-    return <Navigate to="/guides" replace />;
+    return <NotFoundPage />;
   }
 
   const relatedDestinations = getRelatedDestinations(
@@ -72,26 +72,26 @@ export default function GuideDetailPage() {
           <img
             src={guide.coverImage}
             alt={guide.title}
-            className="h-[70vh] w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.25),rgba(2,6,23,0.8))]" />
-          <div className="absolute inset-x-0 bottom-0 mx-auto flex w-full max-w-none flex-col gap-6 px-6 py-12 sm:px-8 lg:px-10 lg:py-16">
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.35),rgba(2,6,23,0.8))]" />
+          <div className="relative mx-auto flex min-h-[76vh] w-full max-w-none flex-col justify-end gap-6 px-6 pb-10 pt-44 sm:px-8 lg:min-h-[80vh] lg:px-10 lg:pb-14">
             <div className="max-w-3xl">
-              <div className="inline-flex rounded-full border border-emerald-200/20 bg-emerald-950/70 px-4 py-2 text-sm font-semibold uppercase tracking-[0.28em] text-emerald-100">
+              <div className="inline-flex rounded-full border border-emerald-100/25 bg-[#214b37]/60 px-4 py-2 text-sm font-semibold uppercase tracking-[0.28em] text-emerald-100 backdrop-blur-md">
                 {guide.category}
               </div>
               <h1 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
                 {guide.title}
               </h1>
-              <p className="mt-6 text-lg leading-8 text-slate-200">
+              <p className="mt-6 text-lg leading-8 text-slate-200 [text-wrap:balance]">
                 {guide.subtitle}
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 text-sm text-slate-300">
-              <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2">
+            <div className="flex flex-wrap gap-4 text-sm text-white">
+              <span className="rounded-full border border-emerald-100/15 bg-[#214b37]/55 px-4 py-2 backdrop-blur-md">
                 {guide.readingTime}
               </span>
-              <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2">
+              <span className="rounded-full border border-emerald-100/15 bg-[#214b37]/55 px-4 py-2 backdrop-blur-md">
                 {guide.category}
               </span>
             </div>
@@ -115,16 +115,40 @@ export default function GuideDetailPage() {
                   Guide content
                 </h2>
                 <div className="mt-6 space-y-5 text-slate-300">
-                  {guide.content?.map((block) => (
-                    <p key={block} className="text-lg leading-8">
-                      {block}
-                    </p>
-                  ))}
+                  {guide.content?.map((block, index) => {
+                    if (typeof block === "string") {
+                      return (
+                        <p key={index} className="text-lg leading-8">
+                          {block}
+                        </p>
+                      );
+                    }
+
+                    if (block?.type === "image") {
+                      return (
+                        <figure key={index}>
+                          <img
+                            src={block.src}
+                            alt={block.alt || guide.title}
+                            loading="lazy"
+                            className="h-[24rem] w-full rounded-[2rem] border border-white/10 object-cover"
+                          />
+                          {block.caption ? (
+                            <figcaption className="mt-3 text-center text-sm text-slate-400">
+                              {block.caption}
+                            </figcaption>
+                          ) : null}
+                        </figure>
+                      );
+                    }
+
+                    return null;
+                  })}
                 </div>
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 lg:sticky lg:top-32 lg:self-start">
               <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8">
                 <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
                   Quick tips

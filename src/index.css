@@ -161,18 +161,17 @@ textarea {
 .site-page [class*="text-slate-900"],
 .site-page [class*="text-slate-950"],
 .site-page [class*="text-white"] {
-  color: #20372a !important;
+  color: #20372a;
 }
 
 .site-page [class*="text-emerald-100"],
 .site-page [class*="text-emerald-200"] {
-  color: #2c583d !important;
+  color: #2c583d;
 }
 
 .site-page [class*="text-emerald-300"],
 .site-page [class*="text-emerald-400"] {
-  color: #244a33 !important;
-}
+  color: #244a33}
 
 .site-page [class*="text-amber-200"],
 .site-page [class*="text-amber-300"],
@@ -355,7 +354,7 @@ textarea {
 }
 
 .site-page.weather-page .weather-panel .weather-inset [class*="text-emerald-"] {
-  color: #2c583d !important;
+  color: #2c583d;
 }
 
 .site-page.weather-page .weather-results [class*="text-amber-200"] {

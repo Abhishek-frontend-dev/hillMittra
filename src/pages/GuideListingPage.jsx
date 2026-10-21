@@ -105,7 +105,7 @@ export default function GuideListingPage() {
               </h1>
               <p className="mt-6 text-lg leading-8 text-slate-300">
                 Find thoughtful guidance for budgeting, packing, solo travel and
-                more — without the noise of a generic travel blog.
+                more - without the noise of a generic travel blog.
               </p>
             </motion.div>
 
