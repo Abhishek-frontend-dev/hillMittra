@@ -13,6 +13,25 @@ import {
 } from "../utils/contentRelations";
 import { getSeoMetadata } from "../utils/seo";
 
+function renderInlineLinks(text) {
+  return text.split(/(\[[^\]]+\]\([^)]+\))/g).map((part, partIndex) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) {
+      return part;
+    }
+    const [, label, target] = match;
+    return (
+      <Link
+        key={partIndex}
+        to={target}
+        className="font-medium text-emerald-300 underline decoration-emerald-400/40 underline-offset-4 transition hover:text-emerald-200"
+      >
+        {label}
+      </Link>
+    );
+  });
+}
+
 export default function StoryDetailPage() {
   const { slug } = useParams();
 
@@ -58,6 +77,21 @@ export default function StoryDetailPage() {
     },
   };
 
+  const faqStructuredData = story.faq?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: story.faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
+
   return (
     <div className="site-page min-h-screen">
       <SEOHead {...seo} image={story.coverImage} />
@@ -68,6 +102,12 @@ export default function StoryDetailPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        {faqStructuredData ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+          />
+        ) : null}
         <section className="detail-hero relative overflow-hidden">
           <img
             src={story.coverImage}
@@ -115,7 +155,7 @@ export default function StoryDetailPage() {
               if (typeof block === "string") {
                 return (
                   <p key={index} className="text-lg leading-8 text-slate-300">
-                    {block}
+                    {renderInlineLinks(block)}
                   </p>
                 );
               }
@@ -162,6 +202,32 @@ export default function StoryDetailPage() {
                   <p className="text-lg leading-8 text-slate-200">“{quote}”</p>
                 </div>
               ))}
+            </div>
+          ) : null}
+
+          {story.faq?.length ? (
+            <div className="mt-16 max-w-4xl">
+              <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+                Questions
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
+                Questions people ask about this story
+              </h2>
+              <div className="mt-8 space-y-5">
+                {story.faq.map((item) => (
+                  <div
+                    key={item.question}
+                    className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-7"
+                  >
+                    <h3 className="text-lg font-semibold text-white">
+                      {item.question}
+                    </h3>
+                    <p className="mt-3 leading-7 text-slate-300">
+                      {item.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           ) : null}
         </section>

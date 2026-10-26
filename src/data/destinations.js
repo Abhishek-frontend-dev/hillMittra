@@ -12,9 +12,9 @@ export const destinations = [
     description:
       "A confluence of temples, riverbank mornings and ridge footpaths that reveals a calmer side of the Himalaya.",
     image:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/rishikesh.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/rishikesh.jpg",
       "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
     ],
     overview:
@@ -114,9 +114,9 @@ export const destinations = [
     description:
       "High-altitude silence, panoramic ridgelines and a winter landscape that feels suspended above the world.",
     image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/auli.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/auli.jpg",
       "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
     ],
     overview:
@@ -216,9 +216,9 @@ export const destinations = [
     description:
       "A soft, storybook escape with misty mornings, colonial charm and pine-draped viewpoints over the lake.",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/nainital.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/nainital.jpg",
       "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
     ],
     overview:
@@ -311,9 +311,9 @@ export const destinations = [
     description:
       "A quiet cantonment town held in pine and oak, where regimental history, fruit orchards and long ridge roads set an easy, patient pace.",
     image:
-      "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/ranikhet.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/ranikhet.jpg",
       "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
     ],
     overview:
@@ -406,9 +406,9 @@ export const destinations = [
     description:
       "A dense oak-and-rhododendron sanctuary wrapped around a high ridge, ending at a stone viewpoint that reads the whole Kumaon Himalaya at once.",
     image:
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/binsar.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/binsar.jpg",
       "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
     ],
     overview:
@@ -501,9 +501,9 @@ export const destinations = [
     description:
       "A small fruit-country hamlet on a high ridge, where old stone steps, limestone cliffs and orchard lanes all point toward long Himalayan views.",
     image:
-      "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/mukteshwar.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/mukteshwar.jpg",
       "https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=80",
     ],
     overview:
@@ -888,9 +888,9 @@ export const destinations = [
     description:
       "Uttarakhand's oldest pilgrim city, where the Ganga leaves the hills and the ghats fill with lamps each evening.",
     image:
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/haridwar.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/haridwar.jpg",
       "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
     ],
     overview:
@@ -1370,9 +1370,9 @@ export const destinations = [
     description:
       "A UNESCO-listed high-altitude valley that turns into a natural flower garden every monsoon, reached on a gentle forest trek past waterfalls.",
     image:
-      "https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/valley-of-flowers.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/valley-of-flowers.jpg",
       "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
     ],
     overview:
@@ -1448,9 +1448,9 @@ export const destinations = [
       "Fitness first: the valley day itself is gentle, but the Ghangaria approach is a real climb with luggage. Book Ghangaria rooms early in August, carry rain shells regardless of the forecast, and follow park rules exactly - pick nothing, camp nowhere, and stay on the marked trail.",
     nearbyPlaces: ["badrinath", "chopta", "auli"],
     tags: ["trek", "alpine", "nature"],
-    seoTitle: "Valley of Flowers Trek - Bloom Season Guide | HillMittra",
+    seoTitle: "Valley of Flowers Trek - Best Time, Route & Bloom Guide | HillMittra",
     seoDescription:
-      "A practical, honest guide to the Valley of Flowers trek in Uttarakhand - bloom season, the Ghangaria approach, Hemkund Sahib option and Himalayan flower-country photos.",
+      "Plan the Valley of Flowers trek in Uttarakhand - the best time to visit (July to September), the Govindghat to Ghangaria route, the UNESCO World Heritage valley, the Hemkund Sahib option and honest advice from flower season.",
   },
   {
     id: "badrinath",
@@ -1543,9 +1543,9 @@ export const destinations = [
       "Acclimatize gently - this is high altitude, so take the first evening slowly and keep hydrated. Book the Joshimath halt in advance during yatra months, keep ID handy at checkpoints, and dress modestly and warmly around the shrine.",
     nearbyPlaces: ["valley-of-flowers", "auli"],
     tags: ["temple", "spiritual", "mountain"],
-    seoTitle: "Badrinath Temple and Char Dham Guide | HillMittra",
+    seoTitle: "Badrinath Dham - Temple, Tapt Kund & Char Dham Guide | HillMittra",
     seoDescription:
-      "A calm guide to Badrinath - the shrine between the Nar and Narayana ranges, Tapt Kund's springs, Mana village myths and practical Char Dham travel notes.",
+      "A calm guide to Badrinath Dham in Uttarakhand - the temple between the Nar and Narayana ranges, Tapt Kund's hot springs, Mana village, how to reach Badrinath and practical Char Dham yatra travel notes.",
   },
   {
     id: "kedarnath",
@@ -1560,9 +1560,9 @@ export const destinations = [
     description:
       "The most dramatic shrine of the Panch Kedar, sitting in a stone bowl below the Kedarnath massif at over 3,500 metres, reached on a mountain trek.",
     image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/kedarnath.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80",
+      "/images/destinations/kedarnath.jpg",
       "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1200&q=80",
     ],
     overview:
@@ -1638,9 +1638,9 @@ export const destinations = [
       "Respect altitude: everyone climbs faster than needed on day one and pays for it in the evening. Keep a rain shell inside the pack, book mules or palanquins at registered counters only, and check the weather advisory every morning of the trek.",
     nearbyPlaces: ["badrinath", "chopta"],
     tags: ["temple", "trek", "spiritual"],
-    seoTitle: "Kedarnath Temple Trek and Yatra Guide | HillMittra",
+    seoTitle: "Kedarnath Yatra - Temple, Gaurikund Trek & Guide | HillMittra",
     seoDescription:
-      "A grounded guide to Kedarnath - the mountainside temple at 3,583 metres, the Gaurikund trek, darshan timings, altitude care and Panch Kedar context.",
+      "A grounded guide to the Kedarnath yatra - the Jyotirlinga temple at 3,583 metres, the 16 km trek from Gaurikund, darshan, the best time to visit and altitude care on the Panch Kedar pilgrimage.",
   },
   {
     id: "gangotri",
