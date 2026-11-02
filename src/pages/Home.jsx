@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -12,7 +12,8 @@ import Places from "../sections/Places";
 import Guides from "../sections/Guides";
 import Weather from "../sections/Weather";
 import Stories from "../sections/Stories";
-import Vision from "../sections/Vision";
+import AboutSection from "../sections/AboutSection";
+import LocalProducts from "../sections/LocalProducts";
 
 const pathMap = {
   "/destinations": "places",
@@ -24,14 +25,20 @@ const pathMap = {
 
 export default function Home({ scrollToSection }) {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const section = scrollToSection || pathMap[location.pathname] || "home";
+    const hash = (location.hash || "").replace("#", "");
+    const section =
+      scrollToSection || hash || pathMap[location.pathname] || "home";
     const target = document.getElementById(section);
     if (target) {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [location.pathname, scrollToSection]);
+    if (hash && scrollToSection !== hash) {
+      navigate(location.pathname, { replace: true });
+    }
+  }, [location.pathname, location.hash, scrollToSection]);
 
   const seo = getSeoMetadata(
     {
@@ -53,7 +60,8 @@ export default function Home({ scrollToSection }) {
         <Guides />
         <Weather />
         <Stories />
-        <Vision />
+        <AboutSection />
+        <LocalProducts />
       </main>
       <Footer />
     </div>

@@ -135,7 +135,7 @@ export default function DestinationListingPage() {
       <NavBar />
 
       <main className="pt-24">
-        <section className="border-b border-white/10">
+        <section className="border-b border-emerald-900/10">
           <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
@@ -143,13 +143,13 @@ export default function DestinationListingPage() {
               transition={{ duration: 0.7 }}
               className="max-w-3xl"
             >
-              <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+              <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                 Destination collection
               </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-emerald-950 sm:text-5xl">
                 Explore destinations
               </h1>
-              <p className="mt-6 text-lg leading-8 text-slate-300">
+              <p className="mt-6 text-lg leading-8 text-slate-600">
                 Discover mountain landscapes shaped by slow travel, cinematic
                 views and thoughtful stays.
               </p>
@@ -159,13 +159,13 @@ export default function DestinationListingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="mt-10 rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]"
+              className="mt-10 rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]"
             >
               <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                 <div className="w-full lg:max-w-xl">
                   <label
                     htmlFor="destination-search"
-                    className="text-sm uppercase tracking-[0.28em] text-slate-400"
+                    className="text-sm uppercase tracking-[0.28em] text-slate-500"
                   >
                     Search destinations
                   </label>
@@ -176,7 +176,7 @@ export default function DestinationListingPage() {
                       value={search}
                       onChange={(event) => setSearch(event.target.value)}
                       placeholder="Try Rishikesh, Auli or Nainital"
-                      className="w-full rounded-full border border-white/10 bg-slate-950/70 px-5 py-3 text-sm text-white outline-none ring-0 placeholder:text-slate-500"
+                      className="w-full rounded-full border border-emerald-900/10 bg-white px-5 py-3 text-sm text-emerald-950 outline-none ring-0 placeholder:text-slate-500"
                     />
                   </div>
                   {suggestionList.length > 0 ? (
@@ -185,7 +185,7 @@ export default function DestinationListingPage() {
                         <Link
                           key={destination.id}
                           to={`/destination/${destination.slug}`}
-                          className="rounded-full border border-emerald-300/20 bg-emerald-950/20 px-3 py-1.5 text-sm text-emerald-100 transition hover:bg-emerald-950/35"
+                          className="rounded-full border border-emerald-900/15 bg-mist px-3 py-1.5 text-sm text-emerald-800 transition hover:bg-[#e4ebdf]"
                         >
                           {destination.name}
                         </Link>
@@ -198,14 +198,14 @@ export default function DestinationListingPage() {
                   <button
                     type="button"
                     onClick={() => setFiltersOpen((current) => !current)}
-                    className="rounded-full border border-emerald-300/30 bg-emerald-950/20 px-4 py-2 text-sm font-semibold text-emerald-100"
+                    className="rounded-full border border-emerald-900/20 bg-mist px-4 py-2 text-sm font-semibold text-emerald-800"
                   >
                     {filtersOpen ? "Hide filters" : "Filters"}
                   </button>
                   <button
                     type="button"
                     onClick={resetFilters}
-                    className="text-sm text-slate-400 transition hover:text-white"
+                    className="text-sm text-slate-500 transition hover:text-emerald-950"
                   >
                     Reset
                   </button>
@@ -216,13 +216,13 @@ export default function DestinationListingPage() {
                 className={`${filtersOpen ? "mt-5 block" : "mt-5 hidden"} gap-4 lg:mt-6 lg:flex lg:items-end lg:gap-4`}
               >
                 <div className="flex-1">
-                  <label className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                  <label className="text-sm uppercase tracking-[0.28em] text-slate-500">
                     Region
                   </label>
                   <select
                     value={region}
                     onChange={(event) => setRegion(event.target.value)}
-                    className="mt-3 w-full rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none"
+                    className="mt-3 w-full rounded-full border border-emerald-900/10 bg-white px-4 py-3 text-sm text-emerald-950 outline-none"
                   >
                     <option value="All">All regions</option>
                     {regionOptions
@@ -236,13 +236,13 @@ export default function DestinationListingPage() {
                 </div>
 
                 <div className="flex-1">
-                  <label className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                  <label className="text-sm uppercase tracking-[0.28em] text-slate-500">
                     Category
                   </label>
                   <select
                     value={category}
                     onChange={(event) => setCategory(event.target.value)}
-                    className="mt-3 w-full rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none"
+                    className="mt-3 w-full rounded-full border border-emerald-900/10 bg-white px-4 py-3 text-sm text-emerald-950 outline-none"
                   >
                     <option value="All">All categories</option>
                     {categoryOptions
@@ -256,13 +256,13 @@ export default function DestinationListingPage() {
                 </div>
 
                 <div className="flex-1">
-                  <label className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                  <label className="text-sm uppercase tracking-[0.28em] text-slate-500">
                     Season
                   </label>
                   <select
                     value={season}
                     onChange={(event) => setSeason(event.target.value)}
-                    className="mt-3 w-full rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none"
+                    className="mt-3 w-full rounded-full border border-emerald-900/10 bg-white px-4 py-3 text-sm text-emerald-950 outline-none"
                   >
                     <option value="All">Any season</option>
                     {SEASON_FILTERS.map((filter) => (
@@ -277,7 +277,7 @@ export default function DestinationListingPage() {
                   <button
                     type="button"
                     onClick={resetFilters}
-                    className="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm text-slate-300 transition hover:bg-white/10"
+                    className="rounded-full border border-emerald-900/10 bg-white px-5 py-3 text-sm text-slate-600 transition hover:bg-mist"
                   >
                     Reset filters
                   </button>
@@ -290,14 +290,14 @@ export default function DestinationListingPage() {
         <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-10 lg:py-20">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+              <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                 Discover
               </p>
-              <h2 className="mt-2 text-2xl font-semibold text-white">
+              <h2 className="mt-2 text-2xl font-semibold text-emerald-950">
                 Curated mountain escapes
               </h2>
             </div>
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-slate-500">
               Showing {filteredDestinations.length} destination
               {filteredDestinations.length === 1 ? "" : "s"}
             </p>
@@ -312,7 +312,7 @@ export default function DestinationListingPage() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.06 }}
-                    className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]"
+                    className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-white shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]"
                   >
                     <Link
                       to={`/destination/${destination.slug}`}
@@ -325,27 +325,27 @@ export default function DestinationListingPage() {
                           className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
-                        <div className="absolute left-5 top-5 rounded-full border border-emerald-200/20 bg-emerald-950/70 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-emerald-100">
+                        <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-[#0f241a] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-white">
                           {destination.category}
                         </div>
                       </div>
                       <div className="flex flex-1 flex-col p-7">
-                        <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                        <p className="text-sm uppercase tracking-[0.28em] text-slate-500">
                           {destination.region}
                         </p>
-                        <h3 className="mt-2 text-2xl font-semibold text-white [text-wrap:balance]">
+                        <h3 className="mt-2 text-2xl font-semibold text-emerald-950 [text-wrap:balance]">
                           {destination.title || destination.name}
                         </h3>
                         <div className="mt-3">
-                          <span className="inline-block max-w-full rounded-2xl border border-white/10 px-3 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-emerald-100/90 [text-wrap:balance]">
+                          <span className="inline-block max-w-full rounded-2xl border border-emerald-900/10 px-3 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-emerald-800 [text-wrap:balance]">
                             {destination.season}
                           </span>
                         </div>
-                        <p className="mt-4 text-sm leading-7 text-slate-300 [text-wrap:pretty]">
+                        <p className="mt-4 text-sm leading-7 text-slate-600 [text-wrap:pretty]">
                           {destination.subtitle || destination.tagline}
                         </p>
                         <div className="mt-auto pt-6">
-                          <div className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-950/20 px-4 py-2 text-sm font-semibold text-emerald-100 transition group-hover:bg-emerald-950/35">
+                          <div className="inline-flex rounded-full border border-emerald-900/20 bg-mist px-4 py-2 text-sm font-semibold text-emerald-800 transition group-hover:bg-[#e4ebdf]">
                             View destination
                           </div>
                         </div>
@@ -367,8 +367,8 @@ export default function DestinationListingPage() {
                       onClick={() => setPage(pageNumber)}
                       className={`h-11 w-11 rounded-full border text-sm font-semibold transition ${
                         pageNumber === page
-                          ? "border-emerald-400 bg-emerald-500 text-slate-950"
-                          : "border-white/10 bg-white/5 text-slate-300 hover:bg-white/10"
+                          ? "border-emerald-400 bg-emerald-700 text-white"
+                          : "border-emerald-900/10 bg-white text-slate-600 hover:bg-mist"
                       }`}
                     >
                       {pageNumber}
@@ -382,7 +382,7 @@ export default function DestinationListingPage() {
                     onClick={() =>
                       setDisplayCount((current) => current + MOBILE_PAGE_SIZE)
                     }
-                    className="rounded-full border border-emerald-300/30 bg-emerald-950/20 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-950/35"
+                    className="rounded-full border border-emerald-900/20 bg-mist px-6 py-3 text-sm font-semibold text-emerald-800 transition hover:bg-[#e4ebdf]"
                   >
                     Load more
                   </button>
@@ -390,18 +390,18 @@ export default function DestinationListingPage() {
               ) : null}
             </>
           ) : (
-            <div className="mt-10 rounded-[2rem] border border-white/10 bg-slate-900/70 p-10 text-center">
-              <h3 className="text-2xl font-semibold text-white">
+            <div className="mt-10 rounded-[2rem] border border-emerald-900/10 bg-white p-10 text-center">
+              <h3 className="text-2xl font-semibold text-emerald-950">
                 No destinations match these filters yet.
               </h3>
-              <p className="mt-4 text-slate-300">
+              <p className="mt-4 text-slate-600">
                 Try a broader search or reset the filters to see the full
                 collection again.
               </p>
               <button
                 type="button"
                 onClick={resetFilters}
-                className="mt-6 rounded-full border border-emerald-300/30 bg-emerald-950/20 px-6 py-3 text-sm font-semibold text-emerald-100"
+                className="mt-6 rounded-full border border-emerald-900/20 bg-mist px-6 py-3 text-sm font-semibold text-emerald-800"
               >
                 Clear filters
               </button>

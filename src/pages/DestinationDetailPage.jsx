@@ -84,23 +84,23 @@ export default function DestinationDetailPage() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.35),rgba(2,6,23,0.78))]" />
           <div className="relative mx-auto flex min-h-[78vh] w-full max-w-none flex-col justify-end gap-8 px-6 pb-10 pt-44 sm:px-8 lg:min-h-[82vh] lg:px-10 lg:pb-14">
             <div className="max-w-3xl">
-              <p className="text-sm uppercase tracking-[0.32em] text-slate-300">
+              <p className="text-sm uppercase tracking-[0.32em] text-slate-600">
                 {destination.region}
               </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-emerald-950 sm:text-5xl">
                 {destination.title || destination.name}
               </h1>
-              <p className="mt-6 text-lg leading-8 text-slate-200 [text-wrap:balance]">
+              <p className="mt-6 text-lg leading-8 text-slate-700 [text-wrap:balance]">
                 {destination.subtitle}
               </p>
             </div>
             <div className="grid gap-4 rounded-[2rem] border border-emerald-100/25 bg-[#214b37]/60 p-6 shadow-[0_30px_90px_-40px_rgba(33,75,55,0.95)] backdrop-blur-xl md:grid-cols-4 sm:grid-cols-2">
               {destination.quickFacts?.map((fact) => (
                 <div key={fact.label}>
-                  <p className="text-sm uppercase tracking-[0.28em] text-white">
+                  <p className="text-sm uppercase tracking-[0.28em] text-emerald-950">
                     {fact.label}
                   </p>
-                  <p className="mt-2 text-lg font-semibold text-white">
+                  <p className="mt-2 text-lg font-semibold text-emerald-950">
                     {fact.value}
                   </p>
                 </div>
@@ -113,45 +113,45 @@ export default function DestinationDetailPage() {
           <div className="grid gap-16 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="space-y-8">
               <div>
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+                <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                   Overview
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">
+                <h2 className="mt-3 text-3xl font-semibold text-emerald-950">
                   A place shaped by atmosphere and intent
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-slate-300">
+                <p className="mt-6 text-lg leading-8 text-slate-600">
                   {destination.overview}
                 </p>
               </div>
 
-              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8">
-                <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+              <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-8">
+                <p className="text-sm uppercase tracking-[0.28em] text-slate-500">
                   Why visit
                 </p>
-                <h3 className="mt-3 text-2xl font-semibold text-white">
+                <h3 className="mt-3 text-2xl font-semibold text-emerald-950">
                   A destination that balances stillness and discovery
                 </h3>
-                <p className="mt-4 text-slate-300 leading-8">
+                <p className="mt-4 text-slate-600 leading-8">
                   {destination.whyVisit}
                 </p>
               </div>
             </div>
 
             <div className="lg:sticky lg:top-32 lg:self-start">
-              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
-                <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+              <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
+                <p className="text-xs uppercase tracking-[0.28em] text-slate-500">
                   Travel style
                 </p>
-                <dl className="mt-3 border-t border-white/10">
+                <dl className="mt-3 border-t border-emerald-900/10">
                   {destination.quickFacts?.map((fact) => (
                     <div
                       key={`${fact.label}-detail`}
-                      className="flex items-baseline justify-between gap-4 border-b border-white/10 py-2.5"
+                      className="flex items-baseline justify-between gap-4 border-b border-emerald-900/10 py-2.5"
                     >
                       <dt className="shrink-0 text-[11px] uppercase tracking-[0.2em] text-slate-500">
                         {fact.label}
                       </dt>
-                      <dd className="text-right text-sm font-medium text-slate-100">
+                      <dd className="text-right text-sm font-medium text-emerald-950">
                         {fact.value}
                       </dd>
                     </div>
@@ -163,18 +163,18 @@ export default function DestinationDetailPage() {
         </section>
 
         {destination.gettingThere ? (
-          <section className="border-t border-white/10 py-20">
+          <section className="border-t border-emerald-900/10 py-20">
             <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-              <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 sm:p-12 lg:grid-cols-[0.38fr_0.62fr]">
+              <div className="grid gap-8 rounded-[2rem] border border-emerald-900/10 bg-white p-8 sm:p-12 lg:grid-cols-[0.38fr_0.62fr]">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.28em] text-emerald-300/90">
+                  <p className="text-sm uppercase tracking-[0.28em] text-emerald-700/90">
                     Getting there
                   </p>
-                  <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
+                  <h2 className="mt-3 text-2xl font-semibold text-emerald-950 sm:text-3xl">
                     The route into this landscape
                   </h2>
                 </div>
-                <p className="text-lg leading-8 text-slate-300">
+                <p className="text-lg leading-8 text-slate-600">
                   {destination.gettingThere}
                 </p>
               </div>
@@ -182,14 +182,14 @@ export default function DestinationDetailPage() {
           </section>
         ) : null}
 
-        <section className="border-t border-white/10 py-20">
+        <section className="border-t border-emerald-900/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+                <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                   Top experiences
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">
+                <h2 className="mt-3 text-3xl font-semibold text-emerald-950">
                   The moments that define this place
                 </h2>
               </div>
@@ -202,7 +202,7 @@ export default function DestinationDetailPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.55, delay: index * 0.06 }}
-                  className="w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
+                  className="w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-white md:w-auto md:max-w-none"
                 >
                   {item.image ? (
                     <img
@@ -213,13 +213,13 @@ export default function DestinationDetailPage() {
                     />
                   ) : null}
                   <div className="p-7">
-                    <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                    <p className="text-sm uppercase tracking-[0.28em] text-slate-500">
                       {index + 1}
                     </p>
-                    <h3 className="mt-4 text-xl font-semibold text-white">
+                    <h3 className="mt-4 text-xl font-semibold text-emerald-950">
                       {item.title}
                     </h3>
-                    <p className="mt-4 text-sm leading-7 text-slate-300">
+                    <p className="mt-4 text-sm leading-7 text-slate-600">
                       {item.description}
                     </p>
                   </div>
@@ -230,12 +230,12 @@ export default function DestinationDetailPage() {
         </section>
 
         {destination.gallery?.length ? (
-          <section className="border-t border-white/10 py-20">
+          <section className="border-t border-emerald-900/10 py-20">
             <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-              <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+              <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                 Moments
               </p>
-              <h2 className="mt-3 text-3xl font-semibold text-white">
+              <h2 className="mt-3 text-3xl font-semibold text-emerald-950">
                 Scenes from this landscape
               </h2>
               <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -247,7 +247,7 @@ export default function DestinationDetailPage() {
                       destination.title || destination.name
                     }`}
                     loading="lazy"
-                    className="h-72 w-full rounded-[2rem] border border-white/10 object-cover"
+                    className="h-72 w-full rounded-[2rem] border border-emerald-900/10 object-cover"
                   />
                 ))}
               </div>
@@ -255,41 +255,41 @@ export default function DestinationDetailPage() {
           </section>
         ) : null}
 
-        <section className="border-t border-white/10 py-20">
+        <section className="border-t border-emerald-900/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8">
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+              <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-8">
+                <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                   Best time to visit
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">
+                <h2 className="mt-3 text-3xl font-semibold text-emerald-950">
                   When this destination feels most alive
                 </h2>
                 <div className="mt-8 space-y-4">
                   {destination.seasonalHighlights?.map((item) => (
                     <div
                       key={item.period}
-                      className="rounded-[1.4rem] border border-white/10 bg-white/5 p-4"
+                      className="rounded-[1.4rem] border border-emerald-900/10 bg-white p-4"
                     >
-                      <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                      <p className="text-sm uppercase tracking-[0.28em] text-slate-500">
                         {item.period}
                       </p>
-                      <p className="mt-2 text-base text-slate-200">
+                      <p className="mt-2 text-base text-slate-700">
                         {item.note}
                       </p>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8">
-                <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+              <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-8">
+                <p className="text-sm uppercase tracking-[0.28em] text-slate-500">
                   Food to try
                 </p>
                 <div className="mt-8 grid gap-5 sm:grid-cols-2">
                   {destination.food?.map((item) => (
                     <div
                       key={item.name}
-                      className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-white/5"
+                      className="overflow-hidden rounded-[1.6rem] border border-emerald-900/10 bg-white"
                     >
                       {item.image ? (
                         <img
@@ -300,10 +300,10 @@ export default function DestinationDetailPage() {
                         />
                       ) : null}
                       <div className="p-5">
-                        <h3 className="text-lg font-semibold text-white">
+                        <h3 className="text-lg font-semibold text-emerald-950">
                           {item.name}
                         </h3>
-                        <p className="mt-3 text-sm leading-7 text-slate-300">
+                        <p className="mt-3 text-sm leading-7 text-slate-600">
                           {item.description}
                         </p>
                       </div>
@@ -315,27 +315,27 @@ export default function DestinationDetailPage() {
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-20">
+        <section className="border-t border-emerald-900/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-            <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8">
-              <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+            <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-8">
+              <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                 Travel tips
               </p>
-              <p className="mt-6 text-lg leading-8 text-slate-300">
+              <p className="mt-6 text-lg leading-8 text-slate-600">
                 {destination.travelTips}
               </p>
             </div>
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-20">
+        <section className="border-t border-emerald-900/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+                <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                   Nearby places
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">
+                <h2 className="mt-3 text-3xl font-semibold text-emerald-950">
                   Places that pair beautifully with this route
                 </h2>
               </div>
@@ -346,7 +346,7 @@ export default function DestinationDetailPage() {
                   <Link
                     key={place.id}
                     to={`/destination/${place.slug}`}
-                    className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
+                    className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-white md:w-auto md:max-w-none"
                   >
                     <img
                       src={place.image}
@@ -354,20 +354,20 @@ export default function DestinationDetailPage() {
                       className="h-48 w-full object-cover transition duration-700 group-hover:scale-105"
                     />
                     <div className="p-6">
-                      <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                      <p className="text-sm uppercase tracking-[0.28em] text-slate-500">
                         {place.region}
                       </p>
-                      <h3 className="mt-3 text-xl font-semibold text-white">
+                      <h3 className="mt-3 text-xl font-semibold text-emerald-950">
                         {place.title || place.name}
                       </h3>
-                      <p className="mt-3 text-sm leading-7 text-slate-300">
+                      <p className="mt-3 text-sm leading-7 text-slate-600">
                         {place.subtitle || place.tagline}
                       </p>
                     </div>
                   </Link>
                 ))
               ) : (
-                <p className="text-slate-300 md:col-span-2 xl:col-span-3">
+                <p className="text-slate-600 md:col-span-2 xl:col-span-3">
                   No matching nearby destination is available for this route in
                   the current database yet.
                 </p>
@@ -376,11 +376,11 @@ export default function DestinationDetailPage() {
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-20">
+        <section className="border-t border-emerald-900/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="grid gap-10 lg:grid-cols-2">
-              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8">
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+              <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-8">
+                <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                   Related guides
                 </p>
                 <div className="mt-8 space-y-4">
@@ -388,24 +388,24 @@ export default function DestinationDetailPage() {
                     relatedGuides.map((guide) => (
                       <div
                         key={guide.id}
-                        className="rounded-[1.6rem] border border-white/10 bg-white/5 p-5"
+                        className="rounded-[1.6rem] border border-emerald-900/10 bg-white p-5"
                       >
-                        <h3 className="text-lg font-semibold text-white">
+                        <h3 className="text-lg font-semibold text-emerald-950">
                           {guide.title}
                         </h3>
-                        <p className="mt-3 text-sm leading-7 text-slate-300">
+                        <p className="mt-3 text-sm leading-7 text-slate-600">
                           {guide.description}
                         </p>
                         <a
                           href="/guides"
-                          className="mt-4 inline-flex text-sm font-semibold text-emerald-300"
+                          className="mt-4 inline-flex text-sm font-semibold text-emerald-700"
                         >
                           Read guide
                         </a>
                       </div>
                     ))
                   ) : (
-                    <p className="text-slate-300">
+                    <p className="text-slate-600">
                       No matching guide is available for this destination in the
                       current database yet.
                     </p>
@@ -413,8 +413,8 @@ export default function DestinationDetailPage() {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8">
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+              <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-8">
+                <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                   Related stories
                 </p>
                 <div className="mt-8 space-y-4">
@@ -422,24 +422,24 @@ export default function DestinationDetailPage() {
                     relatedStories.map((story) => (
                       <div
                         key={story.id}
-                        className="rounded-[1.6rem] border border-white/10 bg-white/5 p-5"
+                        className="rounded-[1.6rem] border border-emerald-900/10 bg-white p-5"
                       >
-                        <h3 className="text-lg font-semibold text-white">
+                        <h3 className="text-lg font-semibold text-emerald-950">
                           {story.title}
                         </h3>
-                        <p className="mt-3 text-sm leading-7 text-slate-300">
+                        <p className="mt-3 text-sm leading-7 text-slate-600">
                           {story.excerpt}
                         </p>
                         <a
                           href="/stories"
-                          className="mt-4 inline-flex text-sm font-semibold text-emerald-300"
+                          className="mt-4 inline-flex text-sm font-semibold text-emerald-700"
                         >
                           Read story
                         </a>
                       </div>
                     ))
                   ) : (
-                    <p className="text-slate-300">
+                    <p className="text-slate-600">
                       More stories will appear here as the collection grows.
                     </p>
                   )}

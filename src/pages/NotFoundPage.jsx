@@ -26,15 +26,15 @@ export default function NotFoundPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-[0_30px_120px_-70px_rgba(15,23,42,0.95)] sm:p-10"
+            className="rounded-[2rem] border border-emerald-900/10 bg-white p-8 shadow-[0_30px_120px_-70px_rgba(15,23,42,0.95)] sm:p-10"
           >
-            <p className="text-sm uppercase tracking-[0.3em] text-emerald-200/80">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald-800/80">
               404 - Lost on the trail
             </p>
             <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
               This mountain path doesn't exist.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
               The page you're looking for may have moved or never existed while
               HillMittra is growing. Here are a few calmer ways back to the
               good trails.
@@ -46,8 +46,8 @@ export default function NotFoundPage() {
                   to={link.to}
                   className={
                     link.primary
-                      ? "inline-flex rounded-full bg-emerald-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-500"
-                      : "inline-flex rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:bg-white/10"
+                      ? "inline-flex rounded-full bg-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-500"
+                      : "inline-flex rounded-full border border-emerald-900/10 bg-white px-5 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-mist"
                   }
                 >
                   {link.label}

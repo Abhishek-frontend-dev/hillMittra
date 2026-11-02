@@ -8,6 +8,8 @@ const navLinks = [
   { label: "Guides", to: "/guides" },
   { label: "Weather", to: "/weather" },
   { label: "Stories", to: "/stories" },
+  { label: "Local Products", to: "/#marketplace" },
+  { label: "Marketplace", comingSoon: true },
   { label: "About", to: "/about" },
 ];
 
@@ -72,15 +74,29 @@ export default function NavBar() {
         </button>
 
         <nav className="hidden items-center gap-6 xl:gap-7 lg:flex">
-          {navLinks.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="relative text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-yellow after:transition-all after:duration-300 hover:text-amber-300 hover:after:w-full xl:text-sm"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navLinks.map((item) =>
+            item.comingSoon ? (
+              <span
+                key={item.label}
+                aria-disabled="true"
+                title={`${item.label} is coming soon`}
+                className="inline-flex cursor-not-allowed items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/60 xl:text-sm"
+              >
+                {item.label}
+                <span className="rounded-full bg-brand-yellow px-2 py-0.5 text-[9px] font-bold normal-case tracking-wide text-emerald-950">
+                  Coming Soon
+                </span>
+              </span>
+            ) : (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="relative text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-yellow after:transition-all after:duration-300 hover:text-amber-300 hover:after:w-full xl:text-sm"
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
@@ -112,16 +128,30 @@ export default function NavBar() {
             className="absolute right-0 top-full w-full max-w-sm border-l border-white/10 bg-emerald-950 px-5 py-5 shadow-xl lg:hidden"
           >
             <nav className="flex flex-col gap-3">
-              {navLinks.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setMenuOpen(false)}
-                  className="rounded-2xl px-3 py-3 text-sm font-medium uppercase tracking-[0.16em] text-white transition hover:bg-white/10 hover:text-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navLinks.map((item) =>
+                item.comingSoon ? (
+                  <span
+                    key={item.label}
+                    aria-disabled="true"
+                    title={`${item.label} is coming soon`}
+                    className="flex cursor-not-allowed items-center justify-between gap-3 rounded-2xl px-3 py-3 text-sm font-medium uppercase tracking-[0.16em] text-white/50"
+                  >
+                    {item.label}
+                    <span className="rounded-full bg-brand-yellow px-2 py-0.5 text-[10px] font-bold normal-case tracking-wide text-emerald-950">
+                      Coming Soon
+                    </span>
+                  </span>
+                ) : (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setMenuOpen(false)}
+                    className="rounded-2xl px-3 py-3 text-sm font-medium uppercase tracking-[0.16em] text-white transition hover:bg-white/10 hover:text-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                  >
+                    {item.label}
+                  </Link>
+                ),
+              )}
             </nav>
 
             <Link

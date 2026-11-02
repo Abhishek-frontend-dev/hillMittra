@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -5,10 +6,14 @@
   --color-brand-green: #2c583d;
   --color-brand-blue: #4392b3;
   --color-brand-white: #ffffff;
+  --color-mist: #eef1ea;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --text-sm: 0.95rem;
+  --text-sm--line-height: 1.7;
   --color-emerald-50: #f1f6f2;
   --color-emerald-100: #e5eee7;
   --color-emerald-200: #c7d9cb;
-  --color-emerald-300: #2c583d;
+  --color-emerald-300: #9ed3b5;
   --color-emerald-400: #3c704f;
   --color-emerald-500: #2c583d;
   --color-emerald-600: #244a33;
@@ -74,21 +79,20 @@ h6 {
   word-break: break-word;
 }
 
-p,
-li,
-span {
-  font-size: 18px;
-  line-height: 1.75;
+@layer base {
+  p,
+  li,
+  span {
+    font-size: 18px;
+    line-height: 1.75;
+  }
 }
 
-.text-sm {
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 button,
@@ -97,135 +101,41 @@ textarea {
   font: inherit;
 }
 
-.max-w-7xl {
-  max-width: none !important;
-}
-
 ::selection {
   background: rgba(252, 197, 53, 0.45);
   color: #20372a;
 }
 
+/*
+  Light editorial canvas for the whole site, matching the homepage.
+  The WeatherPage keeps its own light theme override via .site-page.weather-page
+  below, and photo heroes remain dark overlays with guaranteed white text.
+*/
 .site-page {
-  background: #f7f8f4 !important;
-  color: #20372a !important;
-}
-
-.site-page main > section#about {
-  background: #edf3ed;
-}
-
-.site-page main > section#places {
-  background: #ffffff;
-}
-
-.site-page main > section#guides {
-  background: #f4f6f1;
-}
-
-.site-page main > section#weather {
-  background: #edf4f5;
-}
-
-.site-page main > section#stories {
-  background: #ffffff;
-}
-
-.site-page main > section#vision {
-  background: #edf3ed;
-}
-
-.site-page [class*="rounded-"][class*="bg-slate-950"],
-.site-page [class*="rounded-"][class*="bg-slate-900"] {
-  background-color: #ffffff !important;
-  background-image: none !important;
-}
-
-.site-page [class*="bg-gradient-to-br"][class*="via-slate-"] {
-  background-color: #ffffff !important;
-  background-image: none !important;
-}
-
-.site-page [class*="border-white/"] {
-  border-color: #dce5dd !important;
-}
-
-.site-page [class*="text-slate-100"],
-.site-page [class*="text-slate-200"],
-.site-page [class*="text-slate-300"],
-.site-page [class*="text-slate-400"],
-.site-page [class*="text-slate-500"],
-.site-page [class*="text-slate-600"],
-.site-page [class*="text-slate-700"],
-.site-page [class*="text-slate-800"],
-.site-page [class*="text-slate-900"],
-.site-page [class*="text-slate-950"],
-.site-page [class*="text-white"] {
+  background-color: #eef1ea;
   color: #20372a;
 }
 
-.site-page [class*="text-emerald-100"],
-.site-page [class*="text-emerald-200"] {
-  color: #2c583d;
-}
-
-.site-page [class*="text-emerald-300"],
-.site-page [class*="text-emerald-400"] {
-  color: #244a33}
-
-.site-page [class*="text-amber-200"],
-.site-page [class*="text-amber-300"],
-.site-page [class*="text-amber-400"] {
-  color: #765600 !important;
-}
-
-.site-page [class*="bg-emerald-"].text-white,
-.site-page .site-nav [class*="bg-emerald-"].text-white,
-.site-page .site-footer [class*="bg-emerald-"].text-white {
-  color: #ffffff !important;
-}
-
+/* White text safety over photo heroes and image overlays */
+.site-page .hero-content [class*="text-emerald-9"],
 .site-page .hero-content [class*="text-white"],
 .site-page .hero-content [class*="text-slate-"],
+.site-page .detail-hero [class*="text-emerald-9"],
 .site-page .detail-hero [class*="text-white"],
 .site-page .detail-hero [class*="text-slate-"],
+.site-page .image-overlay [class*="text-emerald-9"],
 .site-page .image-overlay [class*="text-white"],
 .site-page .image-overlay [class*="text-slate-"] {
   color: #ffffff !important;
 }
 
-.site-page .hero-content .hero-description {
-  color: #ffffff !important;
-}
-
-.site-page .site-nav [class*="text-emerald-100"],
-.site-page .site-nav [class*="text-emerald-200"],
-.site-page .site-nav [class*="text-white"] {
-  color: #ffffff !important;
-}
-
-.site-page .site-nav [class*="text-amber-300"],
-.site-page .site-nav [class*="text-amber-400"] {
-  color: #fcc535 !important;
-}
-
-.site-page [class*="bg-emerald-"][class*="text-slate-950"],
-.site-page [class*="bg-emerald-950"][class*="text-emerald-100"],
-.site-page [class*="bg-emerald-950"][class*="text-emerald-200"] {
-  color: #ffffff !important;
-}
-
-.site-page .site-footer {
-  background: #193625 !important;
-  color: #ffffff !important;
-}
-
-.site-page .site-footer [class*="text-slate-"] {
-  color: #e5eee7 !important;
-}
-
-.site-page .site-footer [class*="text-white"] {
-  color: #ffffff !important;
+/*
+  Full-width sections by design: content spans the full viewport width
+  with generous side padding, so the max-w-7xl utility is neutralised
+  (spacing/alignment inside sections stay untouched).
+*/
+.max-w-7xl {
+  max-width: none;
 }
 
 .site-page input,
@@ -247,34 +157,23 @@ textarea {
   outline-offset: 3px;
 }
 
-.site-page .home-weather {
-  background: #eaf2f5;
-}
-
-.site-page .home-weather .weather-card {
-  border-color: #d2e2e9;
-  background-color: #ffffff !important;
-  background-image: none !important;
-}
-
-.site-page .home-weather .weather-forecast {
-  border: 0;
-  background: #2d718f !important;
+.site-page .site-footer {
+  background: #10261a !important;
   color: #ffffff !important;
 }
 
-.site-page .home-weather .weather-forecast [class*="text-slate-"],
-.site-page .home-weather .weather-forecast [class*="text-white"] {
+.site-page .site-footer [class*="text-slate-"] {
+  color: #e5eee7 !important;
+}
+
+.site-page .site-footer [class*="text-white"] {
   color: #ffffff !important;
 }
 
-.site-page .home-weather .weather-note {
-  background: #e6f1f5 !important;
-  box-shadow: inset 0 0 0 1px #c8dce5;
-}
-
+/* Weather page keeps its light, airy theme */
 .site-page.weather-page {
   background: #eaf2f5 !important;
+  color: #20372a;
 }
 
 .site-page.weather-page main > section {
@@ -330,7 +229,7 @@ textarea {
 }
 
 .site-page.weather-page .weather-forecast {
-  border-color: #cfE1e8 !important;
+  border-color: #cfe1e8 !important;
   background: #ffffff !important;
 }
 

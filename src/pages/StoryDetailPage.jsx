@@ -24,7 +24,7 @@ function renderInlineLinks(text) {
       <Link
         key={partIndex}
         to={target}
-        className="font-medium text-emerald-300 underline decoration-emerald-400/40 underline-offset-4 transition hover:text-emerald-200"
+        className="font-medium text-emerald-700 underline decoration-emerald-700/40 underline-offset-4 transition hover:text-emerald-800"
       >
         {label}
       </Link>
@@ -117,21 +117,21 @@ export default function StoryDetailPage() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.35),rgba(2,6,23,0.84))]" />
           <div className="relative mx-auto flex min-h-[76vh] w-full max-w-none flex-col justify-end gap-6 px-6 pb-10 pt-44 sm:px-8 lg:min-h-[80vh] lg:px-10 lg:pb-14">
             <div className="max-w-3xl">
-              <div className="inline-flex rounded-full border border-emerald-100/25 bg-[#214b37]/60 px-4 py-2 text-sm font-semibold uppercase tracking-[0.28em] text-emerald-100 backdrop-blur-md">
+              <div className="inline-flex rounded-full border border-white/15 bg-[#0f241a]/85 px-4 py-2 text-sm font-semibold uppercase tracking-[0.28em] text-white backdrop-blur-md">
                 {story.category}
               </div>
-              <h1 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl [text-wrap:balance]">
+              <h1 className="mt-5 text-4xl font-semibold tracking-tight text-emerald-950 sm:text-5xl [text-wrap:balance]">
                 {story.title}
               </h1>
-              <p className="mt-6 text-lg leading-8 text-slate-200 [text-wrap:balance]">
+              <p className="mt-6 text-lg leading-8 text-slate-700 [text-wrap:balance]">
                 {story.subtitle}
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 text-sm text-white">
-              <span className="rounded-full border border-emerald-100/15 bg-[#214b37]/55 px-4 py-2 backdrop-blur-md">
+            <div className="flex flex-wrap gap-4 text-sm text-emerald-950">
+              <span className="rounded-full border border-white/15 bg-[#0f241a]/85 px-4 py-2 backdrop-blur-md">
                 {story.readingTime}
               </span>
-              <span className="rounded-full border border-emerald-100/15 bg-[#214b37]/55 px-4 py-2 backdrop-blur-md">
+              <span className="rounded-full border border-white/15 bg-[#0f241a]/85 px-4 py-2 backdrop-blur-md">
                 {story.category}
               </span>
             </div>
@@ -142,10 +142,10 @@ export default function StoryDetailPage() {
           <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.2fr_0.78fr] lg:gap-12 xl:gap-16">
           <article className="min-w-0">
           <div>
-            <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+            <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
               Story
             </p>
-            <p className="mt-4 text-lg leading-8 text-slate-300">
+            <p className="mt-4 text-lg leading-8 text-slate-600">
               {story.excerpt}
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function StoryDetailPage() {
               return story.content?.map((block, index) => {
               if (typeof block === "string") {
                 return (
-                  <p key={index} className="text-lg leading-8 text-slate-300">
+                  <p key={index} className="text-lg leading-8 text-slate-600">
                     {renderInlineLinks(block)}
                   </p>
                 );
@@ -176,10 +176,10 @@ export default function StoryDetailPage() {
                       src={block.src}
                       alt={block.alt || story.title}
                       loading="lazy"
-                      className="h-[22rem] w-full rounded-[2rem] border border-white/10 object-cover"
+                      className="h-[22rem] w-full rounded-[2rem] border border-emerald-900/10 object-cover"
                     />
                     {block.caption ? (
-                      <figcaption className="mt-3 text-center text-sm text-slate-400">
+                      <figcaption className="mt-3 text-center text-sm text-slate-500">
                         {block.caption}
                       </figcaption>
                     ) : null}
@@ -199,9 +199,9 @@ export default function StoryDetailPage() {
               {story.quotes.map((quote) => (
                 <div
                   key={quote}
-                  className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8"
+                  className="rounded-[2rem] border border-emerald-900/10 bg-white p-8"
                 >
-                  <p className="text-lg leading-8 text-slate-200">“{quote}”</p>
+                  <p className="text-lg leading-8 text-slate-700">“{quote}”</p>
                 </div>
               ))}
             </div>
@@ -209,22 +209,22 @@ export default function StoryDetailPage() {
 
           {story.faq?.length ? (
             <div id="faq" className="mt-16 max-w-4xl scroll-mt-28">
-              <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+              <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                 Questions
               </p>
-              <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
+              <h2 className="mt-3 text-2xl font-semibold text-emerald-950 sm:text-3xl">
                 Questions people ask about this story
               </h2>
               <div className="mt-8 space-y-5">
                 {story.faq.map((item) => (
                   <div
                     key={item.question}
-                    className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-7"
+                    className="rounded-[2rem] border border-emerald-900/10 bg-white p-7"
                   >
-                    <h3 className="text-lg font-semibold text-white">
+                    <h3 className="text-lg font-semibold text-emerald-950">
                       {item.question}
                     </h3>
-                    <p className="mt-3 leading-7 text-slate-300">
+                    <p className="mt-3 leading-7 text-slate-600">
                       {item.answer}
                     </p>
                   </div>
@@ -235,36 +235,36 @@ export default function StoryDetailPage() {
           </article>
 
           <aside className="lg:sticky lg:top-32 lg:self-start">
-            <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
-              <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+            <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-6 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
+              <p className="text-xs uppercase tracking-[0.28em] text-slate-500">
                 At a glance
               </p>
-              <dl className="mt-3 border-t border-white/10">
+              <dl className="mt-3 border-t border-emerald-900/10">
                 {story.keyFacts?.map((fact) => (
                   <div
                     key={`${fact.label}-fact`}
-                    className="border-b border-white/10 py-2.5"
+                    className="border-b border-emerald-900/10 py-2.5"
                   >
                     <dt className="text-[11px] uppercase tracking-[0.2em] text-slate-500">
                       {fact.label}
                     </dt>
-                    <dd className="mt-1 text-sm leading-6 text-slate-200">
+                    <dd className="mt-1 text-sm leading-6 text-slate-700">
                       {fact.value}
                     </dd>
                   </div>
                 ))}
               </dl>
               <div className="mt-4 flex flex-wrap gap-2">
-                <span className="rounded-full border border-emerald-100/15 bg-[#214b37]/55 px-3 py-1 text-xs text-white">
+                <span className="rounded-full border border-emerald-900/15 bg-mist px-3 py-1 text-xs text-emerald-950">
                   {story.readingTime}
                 </span>
-                <span className="rounded-full border border-emerald-100/15 bg-[#214b37]/55 px-3 py-1 text-xs text-white">
+                <span className="rounded-full border border-emerald-900/15 bg-mist px-3 py-1 text-xs text-emerald-950">
                   {story.category}
                 </span>
               </div>
               {story.faq?.length ? (
-                <div className="mt-5 border-t border-white/10 pt-4">
-                  <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                <div className="mt-5 border-t border-emerald-900/10 pt-4">
+                  <p className="text-xs uppercase tracking-[0.28em] text-slate-500">
                     Quick answers
                   </p>
                   <ul className="mt-3 space-y-2.5">
@@ -272,7 +272,7 @@ export default function StoryDetailPage() {
                       <li key={`${item.question}-side`}>
                         <a
                           href="#faq"
-                          className="block text-sm leading-6 text-emerald-300 transition hover:text-emerald-200"
+                          className="block text-sm leading-6 text-emerald-700 transition hover:text-emerald-800"
                         >
                           {item.question}
                         </a>
@@ -286,14 +286,14 @@ export default function StoryDetailPage() {
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-20">
+        <section className="border-t border-emerald-900/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+                <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                   Related destinations
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">
+                <h2 className="mt-3 text-3xl font-semibold text-emerald-950">
                   Places that echo this memory
                 </h2>
               </div>
@@ -303,7 +303,7 @@ export default function StoryDetailPage() {
                 <Link
                   key={destination.id}
                   to={`/destination/${destination.slug}`}
-                  className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
+                  className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-white md:w-auto md:max-w-none"
                 >
                   <img
                     src={destination.image}
@@ -311,16 +311,16 @@ export default function StoryDetailPage() {
                     className="h-48 w-full object-cover transition duration-700 group-hover:scale-105"
                   />
                   <div className="p-6">
-                    <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                    <p className="text-sm uppercase tracking-[0.28em] text-slate-500">
                       {destination.region}
                     </p>
-                    <h3 className="mt-3 text-xl font-semibold text-white">
+                    <h3 className="mt-3 text-xl font-semibold text-emerald-950">
                       {destination.title || destination.name}
                     </h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-300">
+                    <p className="mt-3 text-sm leading-7 text-slate-600">
                       {destination.subtitle || destination.tagline}
                     </p>
-                    <div className="mt-5 text-sm font-semibold text-emerald-300">
+                    <div className="mt-5 text-sm font-semibold text-emerald-700">
                       Explore destination
                     </div>
                   </div>
@@ -330,14 +330,14 @@ export default function StoryDetailPage() {
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-20">
+        <section className="border-t border-emerald-900/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+                <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                   Related guides
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">
+                <h2 className="mt-3 text-3xl font-semibold text-emerald-950">
                   Reading that deepens the journey
                 </h2>
               </div>
@@ -347,15 +347,15 @@ export default function StoryDetailPage() {
                 <Link
                   key={guide.id}
                   to={`/guide/${guide.slug}`}
-                  className="w-[80vw] max-w-[22rem] shrink-0 snap-start rounded-[2rem] border border-white/10 bg-slate-900/80 p-7 md:w-auto md:max-w-none"
+                  className="w-[80vw] max-w-[22rem] shrink-0 snap-start rounded-[2rem] border border-emerald-900/10 bg-white p-7 md:w-auto md:max-w-none"
                 >
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-emerald-950">
                     {guide.title}
                   </h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-300">
+                  <p className="mt-4 text-sm leading-7 text-slate-600">
                     {guide.description}
                   </p>
-                  <div className="mt-5 text-sm font-semibold text-emerald-300">
+                  <div className="mt-5 text-sm font-semibold text-emerald-700">
                     Read guide
                   </div>
                 </Link>
@@ -364,14 +364,14 @@ export default function StoryDetailPage() {
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-20">
+        <section className="border-t border-emerald-900/10 py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+                <p className="text-sm uppercase tracking-[0.32em] text-slate-500">
                   More stories
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">
+                <h2 className="mt-3 text-3xl font-semibold text-emerald-950">
                   Continue staying with the hills
                 </h2>
               </div>
@@ -381,7 +381,7 @@ export default function StoryDetailPage() {
                 <Link
                   key={item.id}
                   to={`/story/${item.slug}`}
-                  className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
+                  className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-white md:w-auto md:max-w-none"
                 >
                   <img
                     src={item.coverImage}
@@ -389,13 +389,13 @@ export default function StoryDetailPage() {
                     className="h-48 w-full object-cover transition duration-700 group-hover:scale-105"
                   />
                   <div className="p-6">
-                    <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                    <p className="text-sm uppercase tracking-[0.28em] text-slate-500">
                       {item.category}
                     </p>
-                    <h3 className="mt-3 text-xl font-semibold text-white">
+                    <h3 className="mt-3 text-xl font-semibold text-emerald-950">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-300">
+                    <p className="mt-3 text-sm leading-7 text-slate-600">
                       {item.excerpt}
                     </p>
                   </div>

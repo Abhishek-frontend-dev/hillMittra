@@ -51,15 +51,15 @@ export default function About() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-[0_30px_120px_-70px_rgba(15,23,42,0.95)] sm:p-10"
+              className="rounded-[2rem] border border-emerald-900/10 bg-white p-8 shadow-[0_30px_120px_-70px_rgba(15,23,42,0.95)] sm:p-10"
             >
-              <p className="text-sm uppercase tracking-[0.3em] text-emerald-200/80">
+              <p className="text-sm uppercase tracking-[0.3em] text-emerald-800/80">
                 About HillMittra
               </p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
                 A quieter kind of mountain travel, designed with intention.
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
                 HillMittra is a carefully crafted travel companion for travelers
                 who want the Himalaya to feel intimate, cinematic and deeply
                 human.
@@ -67,13 +67,13 @@ export default function About() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
                   to="/destinations"
-                  className="inline-flex rounded-full bg-emerald-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-500"
+                  className="inline-flex rounded-full bg-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-500"
                 >
                   Explore destinations
                 </Link>
                 <Link
                   to="/guides"
-                  className="inline-flex rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:bg-white/10"
+                  className="inline-flex rounded-full border border-emerald-900/10 bg-white px-5 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-mist"
                 >
                   Read guides
                 </Link>
@@ -84,12 +84,12 @@ export default function About() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.08 }}
-              className="rounded-[2rem] border border-emerald-300/20 bg-gradient-to-br from-emerald-950/70 via-slate-900/80 to-slate-950 p-8 sm:p-10"
+              className="rounded-[2rem] border border-emerald-900/15 bg-white p-8 sm:p-10"
             >
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
+              <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
                 The story behind the brand
               </p>
-              <p className="mt-6 text-lg leading-8 text-slate-300">
+              <p className="mt-6 text-lg leading-8 text-slate-600">
                 The idea emerged from a simple belief: mountain journeys are
                 most powerful when they leave space for reflection. We shape
                 every page around feeling, pacing and the kind of stillness that
@@ -108,12 +108,12 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.55 }}
-                className="rounded-[2rem] border border-white/10 bg-slate-950/75 p-8"
+                className="rounded-[2rem] border border-emerald-900/10 bg-white p-8"
               >
-                <h2 className="text-2xl font-semibold text-white">
+                <h2 className="text-2xl font-semibold text-emerald-950">
                   {value.title}
                 </h2>
-                <p className="mt-4 text-base leading-8 text-slate-400">
+                <p className="mt-4 text-base leading-8 text-slate-500">
                   {value.description}
                 </p>
               </motion.article>
@@ -121,28 +121,28 @@ export default function About() {
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
+            <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-8">
+              <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
                 Join the journey
               </p>
-              <h2 className="mt-4 text-3xl font-semibold text-white">
+              <h2 className="mt-4 text-3xl font-semibold text-emerald-950">
                 Travel notes, quiet inspiration and seasonal updates.
               </h2>
-              <p className="mt-5 text-base leading-8 text-slate-400">
+              <p className="mt-5 text-base leading-8 text-slate-500">
                 Whether you are planning your first hill escape or returning for
                 a slower season, the platform is designed to feel like a calm
                 companion from first idea to final arrival.
               </p>
               <Link
                 to="/stories"
-                className="mt-8 inline-flex rounded-full border border-emerald-300/20 bg-emerald-950/30 px-5 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-950/50"
+                className="mt-8 inline-flex rounded-full border border-emerald-900/15 bg-emerald-950/30 px-5 py-3 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-950/50"
               >
                 Read stories
               </Link>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-slate-950/75 p-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
+            <div className="rounded-[2rem] border border-emerald-900/10 bg-white p-8">
+              <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
                 Stay connected
               </p>
               <div className="mt-6 space-y-3">
@@ -152,10 +152,10 @@ export default function About() {
                     href={social.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-between rounded-[1.3rem] border border-white/10 bg-white/5 px-4 py-4 text-sm font-semibold text-slate-100 transition hover:bg-white/10"
+                    className="flex items-center justify-between rounded-[1.3rem] border border-emerald-900/10 bg-white px-4 py-4 text-sm font-semibold text-emerald-950 transition hover:bg-mist"
                   >
                     <span>{social.label}</span>
-                    <span className="text-slate-400">↗</span>
+                    <span className="text-slate-500">↗</span>
                   </a>
                 ))}
               </div>
