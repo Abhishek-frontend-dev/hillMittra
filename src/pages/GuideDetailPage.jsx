@@ -148,39 +148,36 @@ export default function GuideDetailPage() {
               </div>
             </div>
 
-            <div className="space-y-8 lg:sticky lg:top-32 lg:self-start">
-              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8">
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+            <div className="lg:sticky lg:top-32 lg:self-start">
+              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
+                <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
                   Quick tips
                 </p>
-                <div className="mt-6 space-y-4">
+                <dl className="mt-3 border-t border-white/10">
                   {guide.quickTips?.map((tip) => (
                     <div
                       key={tip.title}
-                      className="rounded-[1.4rem] border border-white/10 bg-white/5 p-4"
+                      className="border-b border-white/10 py-2.5"
                     >
-                      <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                      <dt className="text-[11px] uppercase tracking-[0.2em] text-slate-500">
                         {tip.title}
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-slate-300">
+                      </dt>
+                      <dd className="mt-1 text-sm leading-6 text-slate-200">
                         {tip.description}
-                      </p>
+                      </dd>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8">
-                <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
+                </dl>
+                <p className="mt-5 text-xs uppercase tracking-[0.28em] text-slate-400">
                   Things to remember
                 </p>
-                <ul className="mt-6 space-y-3 text-slate-300">
+                <ul className="mt-3 space-y-2">
                   {guide.checklist?.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-3 rounded-[1.2rem] border border-white/10 bg-white/5 px-4 py-3"
+                      className="flex items-start gap-2.5 text-sm leading-6 text-slate-300"
                     >
-                      <span className="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -202,12 +199,12 @@ export default function GuideDetailPage() {
                 </h2>
               </div>
             </div>
-            <div className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div className="scroll-row mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:grid md:grid-cols-2 md:overflow-visible md:pb-0 xl:grid-cols-3">
               {relatedDestinations.map((destination) => (
                 <Link
                   key={destination.id}
                   to={`/destination/${destination.slug}`}
-                  className="group overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80"
+                  className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
                 >
                   <img
                     src={destination.image}
@@ -246,11 +243,11 @@ export default function GuideDetailPage() {
                 </h2>
               </div>
             </div>
-            <div className="mt-10 grid gap-8 md:grid-cols-2">
+            <div className="scroll-row mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:grid md:grid-cols-2 md:overflow-visible md:pb-0">
               {relatedStories.map((story) => (
                 <div
                   key={story.id}
-                  className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-7"
+                  className="w-[80vw] max-w-[22rem] shrink-0 snap-start rounded-[2rem] border border-white/10 bg-slate-900/80 p-7 md:w-auto md:max-w-none"
                 >
                   <h3 className="text-xl font-semibold text-white">
                     {story.title}
@@ -282,12 +279,12 @@ export default function GuideDetailPage() {
                 </h2>
               </div>
             </div>
-            <div className="mt-10 grid gap-8 md:grid-cols-3">
+            <div className="scroll-row mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
               {continueExploring.map((item) => (
                 <Link
                   key={item.id}
                   to={`/guide/${item.slug}`}
-                  className="group overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80"
+                  className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
                 >
                   <img
                     src={item.coverImage}

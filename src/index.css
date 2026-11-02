@@ -366,3 +366,13 @@ textarea {
   background-color: #2c583d !important;
   color: #ffffff !important;
 }
+
+/* Horizontal swipe rows (mobile sliders) */
+.scroll-row {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-row::-webkit-scrollbar {
+  display: none;
+}

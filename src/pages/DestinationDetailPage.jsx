@@ -137,26 +137,26 @@ export default function DestinationDetailPage() {
               </div>
             </div>
 
-            <div className="space-y-8 lg:sticky lg:top-32 lg:self-start">
-              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
-                <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+            <div className="lg:sticky lg:top-32 lg:self-start">
+              <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
+                <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
                   Travel style
                 </p>
-                <div className="mt-6 space-y-4">
+                <dl className="mt-3 border-t border-white/10">
                   {destination.quickFacts?.map((fact) => (
                     <div
                       key={`${fact.label}-detail`}
-                      className="rounded-[1.4rem] border border-white/10 bg-white/5 p-4"
+                      className="flex items-baseline justify-between gap-4 border-b border-white/10 py-2.5"
                     >
-                      <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
+                      <dt className="shrink-0 text-[11px] uppercase tracking-[0.2em] text-slate-500">
                         {fact.label}
-                      </p>
-                      <p className="mt-2 text-base font-medium text-white">
+                      </dt>
+                      <dd className="text-right text-sm font-medium text-slate-100">
                         {fact.value}
-                      </p>
+                      </dd>
                     </div>
                   ))}
-                </div>
+                </dl>
               </div>
             </div>
           </div>
@@ -194,7 +194,7 @@ export default function DestinationDetailPage() {
                 </h2>
               </div>
             </div>
-            <div className="mt-10 grid gap-8 md:grid-cols-3">
+            <div className="scroll-row mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
               {destination.thingsToDo?.map((item, index) => (
                 <motion.article
                   key={item.title}
@@ -202,7 +202,7 @@ export default function DestinationDetailPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.55, delay: index * 0.06 }}
-                  className="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80"
+                  className="w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
                 >
                   {item.image ? (
                     <img
@@ -340,13 +340,13 @@ export default function DestinationDetailPage() {
                 </h2>
               </div>
             </div>
-            <div className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div className="scroll-row mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:grid md:grid-cols-2 md:overflow-visible md:pb-0 xl:grid-cols-3">
               {nearbyPlaces.length > 0 ? (
                 nearbyPlaces.map((place) => (
                   <Link
                     key={place.id}
                     to={`/destination/${place.slug}`}
-                    className="group overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80"
+                    className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
                   >
                     <img
                       src={place.image}

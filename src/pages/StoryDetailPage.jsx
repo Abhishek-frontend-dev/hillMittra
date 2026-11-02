@@ -139,6 +139,8 @@ export default function StoryDetailPage() {
         </section>
 
         <section className="mx-auto w-full max-w-none px-6 py-20 sm:px-8 lg:px-10">
+          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.2fr_0.78fr] lg:gap-12 xl:gap-16">
+          <article className="min-w-0">
           <div>
             <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
               Story
@@ -206,7 +208,7 @@ export default function StoryDetailPage() {
           ) : null}
 
           {story.faq?.length ? (
-            <div className="mt-16 max-w-4xl">
+            <div id="faq" className="mt-16 max-w-4xl scroll-mt-28">
               <p className="text-sm uppercase tracking-[0.32em] text-slate-400">
                 Questions
               </p>
@@ -230,6 +232,58 @@ export default function StoryDetailPage() {
               </div>
             </div>
           ) : null}
+          </article>
+
+          <aside className="lg:sticky lg:top-32 lg:self-start">
+            <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-[0_34px_100px_-70px_rgba(15,23,42,0.85)]">
+              <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                At a glance
+              </p>
+              <dl className="mt-3 border-t border-white/10">
+                {story.keyFacts?.map((fact) => (
+                  <div
+                    key={`${fact.label}-fact`}
+                    className="border-b border-white/10 py-2.5"
+                  >
+                    <dt className="text-[11px] uppercase tracking-[0.2em] text-slate-500">
+                      {fact.label}
+                    </dt>
+                    <dd className="mt-1 text-sm leading-6 text-slate-200">
+                      {fact.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="rounded-full border border-emerald-100/15 bg-[#214b37]/55 px-3 py-1 text-xs text-white">
+                  {story.readingTime}
+                </span>
+                <span className="rounded-full border border-emerald-100/15 bg-[#214b37]/55 px-3 py-1 text-xs text-white">
+                  {story.category}
+                </span>
+              </div>
+              {story.faq?.length ? (
+                <div className="mt-5 border-t border-white/10 pt-4">
+                  <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                    Quick answers
+                  </p>
+                  <ul className="mt-3 space-y-2.5">
+                    {story.faq.map((item) => (
+                      <li key={`${item.question}-side`}>
+                        <a
+                          href="#faq"
+                          className="block text-sm leading-6 text-emerald-300 transition hover:text-emerald-200"
+                        >
+                          {item.question}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          </aside>
+          </div>
         </section>
 
         <section className="border-t border-white/10 py-20">
@@ -244,12 +298,12 @@ export default function StoryDetailPage() {
                 </h2>
               </div>
             </div>
-            <div className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div className="scroll-row mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:grid md:grid-cols-2 md:overflow-visible md:pb-0 xl:grid-cols-3">
               {relatedDestinations.map((destination) => (
                 <Link
                   key={destination.id}
                   to={`/destination/${destination.slug}`}
-                  className="group overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80"
+                  className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
                 >
                   <img
                     src={destination.image}
@@ -288,12 +342,12 @@ export default function StoryDetailPage() {
                 </h2>
               </div>
             </div>
-            <div className="mt-10 grid gap-8 md:grid-cols-2">
+            <div className="scroll-row mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:grid md:grid-cols-2 md:overflow-visible md:pb-0">
               {relatedGuides.map((guide) => (
                 <Link
                   key={guide.id}
                   to={`/guide/${guide.slug}`}
-                  className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-7"
+                  className="w-[80vw] max-w-[22rem] shrink-0 snap-start rounded-[2rem] border border-white/10 bg-slate-900/80 p-7 md:w-auto md:max-w-none"
                 >
                   <h3 className="text-xl font-semibold text-white">
                     {guide.title}
@@ -322,12 +376,12 @@ export default function StoryDetailPage() {
                 </h2>
               </div>
             </div>
-            <div className="mt-10 grid gap-8 md:grid-cols-3">
+            <div className="scroll-row mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
               {moreStories.map((item) => (
                 <Link
                   key={item.id}
                   to={`/story/${item.slug}`}
-                  className="group overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80"
+                  className="group w-[80vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 md:w-auto md:max-w-none"
                 >
                   <img
                     src={item.coverImage}

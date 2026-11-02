@@ -5,6 +5,11 @@ export const stories = [
     title: "A quiet evening under the hill sky",
     subtitle:
       "A slow mountain evening shaped by warmth, silence and a dimming ridge line.",
+    keyFacts: [
+      { label: "Type", value: "Slow-travel memory" },
+      { label: "Best enjoyed", value: "From late afternoon onward" },
+      { label: "The core lesson", value: "The hills reward the unhurried" },
+    ],
     category: "Slow Travel",
     readingTime: "5 min read",
     coverImage:
@@ -61,6 +66,12 @@ export const stories = [
     title: "First light over the pine forest",
     subtitle:
       "A morning that feels suspended between mist, silence and possibility.",
+    keyFacts: [
+      { label: "Type", value: "Winter morning story" },
+      { label: "Setting", value: "A homestay above Binsar" },
+      { label: "Wake-up call", value: "About an hour before sunrise" },
+      { label: "Best season", value: "Late December" },
+    ],
     category: "Winter Escape",
     readingTime: "5 min read",
     coverImage:
@@ -118,6 +129,13 @@ export const stories = [
     title: "Tilu Rauteli - the girl who fought seven wars",
     subtitle:
       "The full folk story of Tilu Rauteli (Tilottama Devi) of Garhwal - her seven battles, her horse Binduli, and the evening the river took her.",
+    keyFacts: [
+      { label: "Real name", value: "Tilottama Devi" },
+      { label: "Home village", value: "Gurrad Talla, Chaundkot, Pauri Garhwal" },
+      { label: "Years", value: "Around 1661 to 1681, ages 15 to 20" },
+      { label: "Campaigns", value: "Seven battles, Khairagarh to Kalinkakhal" },
+      { label: "Remembered in", value: "Jagar (Ranbhoot) and the Thadya dance" },
+    ],
     category: "Folk Legend",
     readingTime: "10 min read",
     coverImage:
@@ -186,6 +204,13 @@ export const stories = [
     title: "Aanchhri - the lady of the high meadows",
     subtitle:
       "The complete folk warning of the Uttarakhand hills - Aanchhri (also told as Aachri or Aanchri), the beautiful stranger of the bugyals, told as the old shepherds tell it round the fire.",
+    keyFacts: [
+      { label: "Type", value: "Folk warning tale" },
+      { label: "Home", value: "The high meadows, the bugyals" },
+      { label: "Also called", value: "Aachri, Aanchri, Aanchhri" },
+      { label: "Core rules", value: "Plain dress, no whistling at dusk, never follow" },
+      { label: "Lesson", value: "The meadow keeps its privacy" },
+    ],
     category: "Folk Legend",
     readingTime: "8 min read",
     coverImage:
@@ -249,6 +274,12 @@ export const stories = [
     title: "The bugyal - a year in the living meadows",
     subtitle:
       "The shepherd's calendar above the treeline: what Ali, Bedni and the great grasslands of Uttarakhand really are - and why they are heritage, not scenery.",
+    keyFacts: [
+      { label: "What", value: "High-altitude grassland above the treeline" },
+      { label: "Famous ones", value: "Ali, Bedni, Garson and the Auli meadows" },
+      { label: "Great ritual", value: "Nanda Devi Raj Jat, every twelve years" },
+      { label: "Off season", value: "The meadow rests under winter snow" },
+    ],
     category: "Living Heritage",
     readingTime: "9 min read",
     coverImage:
@@ -312,6 +343,13 @@ export const stories = [
     title: "Golu Devta - the god who answers bells",
     subtitle:
       "The complete legend of Goljyu, the god of justice of Kumaon: the stone-baby tale, the wooden horse that spoke truth, and the ten-thousand-bell court at Chitai.",
+    keyFacts: [
+      { label: "Who", value: "The god of justice of Kumaon" },
+      { label: "Kumaoni name", value: "Goljyu" },
+      { label: "Origin", value: "Royal line of Champawat, son of Jhal Rai and Kalinka" },
+      { label: "Chief temples", value: "Chitai near Almora, Ghorakhal near Bhowali" },
+      { label: "Offerings", value: "Bells, letters and white cloth" },
+    ],
     category: "Folk Legend",
     readingTime: "9 min read",
     coverImage:
