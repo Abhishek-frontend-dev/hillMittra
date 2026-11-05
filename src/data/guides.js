@@ -6,10 +6,8 @@ export const guides = [
     subtitle: "A grounded way to see Uttarakhand without overspending - built on local meals, homestays and slow pacing.",
     category: "Budget",
     readingTime: "7 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/budget-travel-in-the-hills.webp",
+    image: "/images/guide-stories/budget-travel-in-the-hills.webp",
     description:
       "Mountain journeys that cost less because they move slower: transport choices, homestay logic, food habits and the little expenses that quietly inflate a hill trip.",
     overview:
@@ -70,10 +68,8 @@ export const guides = [
       "Making the mountains a calm, confident place to travel alone - with the practical Uttarakhand notes you actually need.",
     category: "Solo",
     readingTime: "6 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/solo-travel-in-the-hills.webp",
+    image: "/images/guide-stories/solo-travel-in-the-hills.webp",
     description:
       "A layered journey from river culture to alpine calm, built for one: route choices, homestay safety, evening planning and the freedom of traveling light.",
     overview:
@@ -134,10 +130,8 @@ export const guides = [
       "The honest layering system for Uttarakhand's cold months - what carries, what wears out, what saves a day.",
     category: "Packing",
     readingTime: "5 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/winter-packing-for-high-altitude-trips.webp",
+    image: "/images/guide-stories/winter-packing-for-high-altitude-trips.webp",
     description:
       "Layering logic for December to February hill trips: three-layer thinking, sock strategy, evening extremes and why the bags of smart winter travelers get smaller, not bigger.",
     overview:
@@ -197,10 +191,8 @@ export const guides = [
       "How to plan Uttarakhand for parents, kids and grandparents - gentle routing, lake mornings and honest expectations.",
     category: "Family",
     readingTime: "7 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/a-family-friendly-hill-escape.webp",
+    image: "/images/guide-stories/a-family-friendly-hill-escape.webp",
     description:
       "The family formula that works in the hills: one base, short outings, slow mornings - and the Uttarakhand places that make multi-generation travel easy rather than heroic.",
     overview:
@@ -261,10 +253,8 @@ export const guides = [
       "Planning around rain, cloud and shifting trail conditions in Uttarakhand with care - and why the wet weeks may still be worth it.",
     category: "Safety",
     readingTime: "6 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/monsoon-travel-in-the-mountains.webp",
+    image: "/images/guide-stories/monsoon-travel-in-the-mountains.webp",
     description:
       "Honest monsoon logic for Uttarakhand: when to go, which routes hold, what to carry, and how the greenest season in the hills can be the most restorative if planned with respect.",
     overview:
@@ -324,10 +314,8 @@ export const guides = [
       "Building an Uttarakhand trip around the food: pahadi thalis, hill sweets, street breakfasts and the rhythm of chai and the seasons.",
     category: "Food",
     readingTime: "6 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/food-first-trip-planning-for-mountain.webp",
+    image: "/images/guide-stories/food-first-trip-planning-for-mountain.webp",
     description:
       "Uttarakhand's food map walked honestly: aloo ke gutke, kafuli, bhatt ki churkani, singori, bal mithai, buransh squash - and how to plan days the way a local eats them.",
     overview:
@@ -388,10 +376,8 @@ export const guides = [
       "Pacing, altitude logic and trail habits for Uttarakhand's classic walks - from Deori Tal mornings to the Chandrashila ridge.",
     category: "Adventure",
     readingTime: "7 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/trekking-tips-for-better-mountain-days.webp",
+    image: "/images/guide-stories/trekking-tips-for-better-mountain-days.webp",
     description:
       "How strong trekking days are actually built in Uttarakhand - pace, hydration, timing, permits and the mountain manners that keep classic trails open and worth walking.",
     overview:

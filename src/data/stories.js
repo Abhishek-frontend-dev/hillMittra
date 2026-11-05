@@ -12,10 +12,8 @@ export const stories = [
     ],
     category: "Slow Travel",
     readingTime: "5 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/a-quiet-evening-under-the-hill-sky.webp",
+    image: "/images/guide-stories/a-quiet-evening-under-the-hill-sky.webp",
     excerpt:
       "The kind of evening that arrives slowly, with warm tea, a cedar-scented breeze and a ridge line glowing at dusk. Here is how an ordinary hill-house evening actually unfolds, minute by minute, until the stars arrive.",
     content: [
@@ -74,10 +72,8 @@ export const stories = [
     ],
     category: "Winter Escape",
     readingTime: "5 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/first-light-over-the-pine-forest.webp",
+    image: "/images/guide-stories/first-light-over-the-pine-forest.webp",
     excerpt:
       "A winter morning in the hills told slowly - cold breath, pine dark and the slow arrival of colour over a snow-brushed ridge, from the first cough of the household to the moment breakfast lands on the table.",
     content: [
@@ -138,10 +134,8 @@ export const stories = [
     ],
     category: "Folk Legend",
     readingTime: "10 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/tilu-rautel-the-girl-who-fought-seven-wars.webp",
+    image: "/images/guide-stories/tilu-rautel-the-girl-who-fought-seven-wars.webp",
     excerpt:
       "Every family in Garhwal keeps a name in its chest like an ember: Tilu Rauteli, the ordinary daughter of an ordinary warrior who answered a mother's grief-taught taunt with seven battles. This is her full story in English - the kauthig, the taunt, the mountains she crossed and the last calm stretch of river.",
     content: [
@@ -213,10 +207,8 @@ export const stories = [
     ],
     category: "Folk Legend",
     readingTime: "8 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/aanchhri-the-lady-of-the-high-meadows.webp",
+    image: "/images/guide-stories/aanchhri-the-lady-of-the-high-meadows.webp",
     excerpt:
       "Aanchhri - you will also hear her called Aachri or Aanchri, because every valley bends the name - is the most carefully preserved folk warning of the Uttarakhand high meadows. This is her full story in English: the herd, the dog, the three rules, and what they mean.",
     content: [
@@ -282,10 +274,8 @@ export const stories = [
     ],
     category: "Living Heritage",
     readingTime: "9 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/the-bugyal-a-year-in-the-living-meadows.webp",
+    image: "/images/guide-stories/the-bugyal-a-year-in-the-living-meadows.webp",
     excerpt:
       "The bugyal lands of Uttarakhand are the region's oldest working farms: rolling high pastures that give a family its fodder the way a field gives grain. Walk their calendar through a full year - the climb, the chhani, the haying, and the twelve-year pilgrimage that passes through Bedni.",
     content: [
@@ -352,10 +342,8 @@ export const stories = [
     ],
     category: "Folk Legend",
     readingTime: "9 min read",
-    coverImage:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
-    image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/images/guide-stories/golu-devta-the-god-who-answers.webp",
+    image: "/images/guide-stories/golu-devta-the-god-who-answers.webp",
     excerpt:
       "Golu Devta - called Goljyu by the people who serve him - is the god of justice of Kumaon, worshipped with bells, letters and an open court that never closed. Here is the full story in English: the riverside birth the queens tried to erase, and the wooden horse that changed everything.",
     content: [
